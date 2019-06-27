@@ -19,6 +19,7 @@ function whoIsPaying(name){
     return arr === num;
   } 
 ```
+Another solution
 ``` javascript
 function palindrome(num) { 
   let str = ""; 
