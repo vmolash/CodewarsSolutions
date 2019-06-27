@@ -11,11 +11,26 @@ function whoIsPaying(name){
 * 2. Numerical Palindrome #1
 (https://www.codewars.com/kata/numerical-palindrome-number-1/train/javascript)
 ```javascript
-  if (typeof num !== 'number' || num < 0){
-    return 'Not valid';
-  }
-  const arr = +(num.toString().split('').reverse().join(''));
-  return arr === num;
+  function palindrome(num) { 
+    if (typeof num !== 'number' || num < 0){
+      return 'Not valid';
+    }
+    const arr = +(num.toString().split('').reverse().join(''));
+    return arr === num;
+  } 
+```
+``` javascript
+function palindrome(num) { 
+  let str = ""; 
+  if (typeof num !== 'number' || num < 0) {
+    return "Not valid";
+  }  
+  str = num + '';  
+  for (let i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str[i] !== str[str.length - i - 1]) {
+      return false;   
+    }
+  } 
+  return true;
 }
-
 ```
