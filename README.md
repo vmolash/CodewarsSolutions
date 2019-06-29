@@ -37,3 +37,4 @@ function palindrome(num) {
 ```
 * new solution to TOG 
 to master
+* new solution into TOG
