@@ -35,4 +35,4 @@ function palindrome(num) {
   return true;
 }
 ```
-* new solution 
+* new solution to TOG 
