@@ -35,3 +35,4 @@ function palindrome(num) {
   return true;
 }
 ```
+* new solution 
