@@ -38,3 +38,18 @@ function palindrome(num) {
 * new solution to TOG 
 to master
 * new solution into TOG
+* second commit into TOG
+
+* 3. 6 kata Simple reversed parenthesis
+https://www.codewars.com/kata/simple-reversed-parenthesis/train/javascript
+``` javascript
+function solve(s){
+  if (s.length%2) return -1;
+  while (/\(\)/g.test(s)) s = s.replace(/\(\)/g, "");
+  let cnt = 0;
+  for (let i = 0; i < s.length -1; i += 2) {
+    s[i] !== s[i + 1] ? cnt+=2 : cnt++;
+  }
+  return cnt;
+}
+```
