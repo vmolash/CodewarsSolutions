@@ -1,4 +1,4 @@
-Hello
+ Hello
 
 =========
 * 1. Who is going to pay for the wall?
@@ -35,3 +35,6 @@ function palindrome(num) {
   return true;
 }
 ```
+* new solution to TOG 
+to master
+* new solution into TOG
