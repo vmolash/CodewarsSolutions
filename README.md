@@ -68,3 +68,12 @@ public class Kata {
       }
     }
   }
+```
+* 5. Sum of a Beach 
+(https://www.codewars.com/kata/5b37a50642b27ebf2e000010)
+``` javascript
+function sumOfABeach(beach) {
+  let reg = /sand|water|fish|sun/gi;
+  let arr = beach.match(reg);
+  return !arr ? 0 : arr.length;
+}
