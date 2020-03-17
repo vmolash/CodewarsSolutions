@@ -77,3 +77,21 @@ function sumOfABeach(beach) {
   let arr = beach.match(reg);
   return !arr ? 0 : arr.length;
 }
+```
+* 6. Array Leaders (Array Series #3)
+(https://www.codewars.com/kata/5a651865fd56cb55760000e0)
+```javascript
+var arrayLeaders = num => {
+  let arr = [];
+  for(let i = 0; i < num.length; i++){
+    let sum = 0;
+    for(let j = i + 1  ; j < num.length; j++){
+      sum += num[j];
+    }
+    if(num[i] > sum){
+      arr.push(num[i]);
+    }
+  }
+  return arr;
+}
+```
