@@ -97,7 +97,7 @@ var arrayLeaders = num => {
 ```
 * 7. Building blocks
 (https://www.codewars.com/kata/55b75fcf67e558d3750000a3)
-```javascript
+```java
 public class Block{
   private int width;
   private int length;
@@ -133,6 +133,22 @@ public class Block{
   
   public int getSurfaceArea() {
     return surface_area;
+  }
+}
+```
+* 8. Playing with cubes
+(https://www.codewars.com/kata/55c0a79e20be94c91400014b)
+```java
+public class Cube{
+  
+  private int Side;
+  
+  public void setSide(int num){
+    this.Side = num;
+  }
+  
+  public int getSide(){
+    return this.Side;
   }
 }
 ```
