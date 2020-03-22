@@ -168,3 +168,9 @@ public class Fibonacci {
   }
 }
 ```
+* 10. Convert number to reversed array of digits
+```javascript
+function digitize(n) {
+  return n.toString().split('').reverse().map(el => +el);
+}
+```
