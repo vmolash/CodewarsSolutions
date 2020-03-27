@@ -174,3 +174,14 @@ function digitize(n) {
   return n.toString().split('').reverse().map(el => +el);
 }
 ```
+* 11. Maximum Multiple
+(https://www.codewars.com/kata/5aba780a6a176b029800041c)
+```javascript
+function maxMultiple(divisor, bound){
+  let res = 0;
+  for(let i = divisor; i <= bound; i += divisor){
+    res = i;
+  }
+return res;
+}
+```
