@@ -185,3 +185,16 @@ function maxMultiple(divisor, bound){
 return res;
 }
 ```
+* 11.1 Maximum Multiple
+```java
+public class MaxMultiple {
+  public static int maxMultiple(int divisor, int bound) {
+    int res = 0;
+    for(int i = divisor; i <= bound; i += divisor){
+      res = i;
+    }
+    return res;
+  }
+}
+```
+
