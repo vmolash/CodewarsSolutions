@@ -214,6 +214,7 @@ public class Kata
  ```
  * 13. Lario and Muigi Pipe Problem
  ```JavaScript
+ (https://www.codewars.com/kata/56b29582461215098d00000f)
 function pipeFix(num){
   let res = [];
   for(let i = num[0]; i <= num[num.length - 1]; i++){
