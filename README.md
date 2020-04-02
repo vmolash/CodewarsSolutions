@@ -211,4 +211,14 @@ public class Kata
    return sum;
   }
  }
-
+ ```
+ * 13. Lario and Muigi Pipe Problem
+ ```JavaScript
+function pipeFix(num){
+  let res = [];
+  for(let i = num[0]; i <= num[num.length - 1]; i++){
+      res.push(i);
+  }
+  return res;
+}
+```
