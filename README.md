@@ -223,3 +223,19 @@ function pipeFix(num){
   return res;
 }
 ```
+* 14. Sort Out The Men From Boys
+(https://www.codewars.com/kata/5af15a37de4c7f223e00012d)
+```JavaScript
+function menFromBoys(arr){
+let arrMan = [];
+let arrBoys = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+      arrMan.push(arr[i]);
+    } else arrBoys.push(arr[i]);
+  }
+  arrMan.sort((a,b) => a-b);
+  arrBoys.sort((a,b) => b-a);
+  let res = [...new Set([...arrMan, ...arrBoys])];
+  return res;
+}
