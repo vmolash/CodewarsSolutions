@@ -247,3 +247,11 @@ function discoverOriginalPrice(discountedPrice, salePercentage){
   return +(discountedPrice /(100 - salePercentage) * 100).toFixed(2);
 }
 ```
+* 16. Sum of Multiples
+(https://www.codewars.com/kata/57241e0f440cd279b5000829)
+```JavaScript
+function sumMul(n,m){
+  let res = 0;
+  for ( let i = n; i < m; i += n) res += i;  
+  return res > 0 ? res : 'INVALID';
+}
