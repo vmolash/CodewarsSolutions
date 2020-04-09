@@ -279,3 +279,9 @@ const sumAverage = (arr) => {
 return Math.floor(arr.reduce((a,b)=>a+b.reduce((c,d)=>c+d)/b.length,0));
 }
 ```
+* 19. Discover The Original Price
+```JavaScript
+function discoverOriginalPrice(discountedPrice, salePercentage){
+  return +(discountedPrice /(100 - salePercentage) * 100).toFixed(2);
+}
+```
