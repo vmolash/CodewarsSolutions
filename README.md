@@ -272,3 +272,10 @@ function sumMul(n,m){
 var number = function(busStops){
   return busStops.reduce((accum, [a,b]) => accum + a - b, 0)
 }
+```
+* 18. Sum of Array Averages
+```JavaScript
+const sumAverage = (arr) => {
+return Math.floor(arr.reduce((a,b)=>a+b.reduce((c,d)=>c+d)/b.length,0));
+}
+```
