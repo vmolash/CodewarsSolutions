@@ -285,3 +285,11 @@ function discoverOriginalPrice(discountedPrice, salePercentage){
   return +(discountedPrice /(100 - salePercentage) * 100).toFixed(2);
 }
 ```
+* 20. Sum of Multiples
+```JavaScript
+function sumMul(n,m){
+  let res = 0;
+  for ( let i = n; i < m; i += n) res += i;  
+  return res > 0 ? res : 'INVALID';
+}
+```
