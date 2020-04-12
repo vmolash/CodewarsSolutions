@@ -293,3 +293,12 @@ function sumMul(n,m){
   return res > 0 ? res : 'INVALID';
 }
 ```
+```javascript
+function sumMul(n,m){
+  let sum = 0;
+  if(m <= 0) return 'INVALID';
+  for(let i = n; i < m ; i+=n){
+   sum += i 
+  }
+  return sum;
+}
