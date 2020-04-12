@@ -302,3 +302,14 @@ function sumMul(n,m){
   }
   return sum;
 }
+```
+* 21. Sum of Multiples
+```JavaScript
+function sumMul(n,m){
+  let sum = 0;
+  if(m <= 0) return 'INVALID';
+  for(let i = n; i < m ; i+=n){
+   sum += i;
+  }
+  return sum;
+}
