@@ -321,3 +321,9 @@ var number = function(busStops){
   return busStops.reduce((accum, [a,b]) => accum + a - b, 0)
 }
 ```
+*. 23 Sum of Array Averages
+(https://www.codewars.com/kata/56d5166ec87df55dbe000063)
+```JavaScript
+const sumAverage = (arr) => {
+return Math.floor(arr.reduce((a,b)=>a+b.reduce((c,d)=>c+d)/b.length,0));
+}
