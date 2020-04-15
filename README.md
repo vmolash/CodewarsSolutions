@@ -327,3 +327,8 @@ var number = function(busStops){
 const sumAverage = (arr) => {
 return Math.floor(arr.reduce((a,b)=>a+b.reduce((c,d)=>c+d)/b.length,0));
 }
+```
+```javascript
+const sumAverage = (arr) => {
+  return Math.floor(arr.map(el => el.reduce((accum, current) => accum + current, 0)/el.length).reduce((accum, current) => accum + current, 0));
+}
