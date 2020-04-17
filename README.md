@@ -332,3 +332,19 @@ return Math.floor(arr.reduce((a,b)=>a+b.reduce((c,d)=>c+d)/b.length,0));
 const sumAverage = (arr) => {
   return Math.floor(arr.map(el => el.reduce((accum, current) => accum + current, 0)/el.length).reduce((accum, current) => accum + current, 0));
 }
+```
+```JavaScript
+const sumAverage = (arr) => {
+  let res = 0;
+  for(let i = 0; i < arr.length; i++){
+    let sum = 0;
+    for(let j = 0; j < arr[i].length; j++){
+      sum += arr[i][j];
+      console.log(sum)
+    }
+    res += sum/arr[i].length;
+    console.log(res);
+  }
+  return Math.floor(res);
+}
+```
