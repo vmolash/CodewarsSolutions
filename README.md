@@ -399,3 +399,23 @@ const whosOnline = (friends) => {
  }
  return obj;
 }
+```
+*. 26 Player Contact Manager
+(https://www.codewars.com/kata/5b203de891c7469b520000b4)
+```JavaScript
+function playerManager(players) {
+  if(players === null || players.length === 0 ) {
+    return [];
+  }
+  let arr = players.split(', ');
+  let res = [];
+  for(let i = 0; i < arr.length; i+= 2){
+    let obj = {
+      player: arr[i],
+      contact: +arr[i+1]
+    };
+    res.push(obj);
+  }
+  return res;
+}
+```
