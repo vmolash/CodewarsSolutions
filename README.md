@@ -419,3 +419,14 @@ function playerManager(players) {
   return res;
 }
 ```
+*.27 The Office I - Outed
+https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1
+```JavaScript
+function outed(meet, boss){
+const num = Object.values(meet);
+num.push(meet[boss]);
+let amount = Object.keys(meet).length;
+let s = num.reduce((acc, curr) => acc + curr, 0);
+return (s / amount <= 5) ? 'Get Out Now!' : 'Nice Work Champ!';
+}
+```
