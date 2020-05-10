@@ -430,3 +430,23 @@ let s = num.reduce((acc, curr) => acc + curr, 0);
 return (s / amount <= 5) ? 'Get Out Now!' : 'Nice Work Champ!';
 }
 ```
+*. 27'1
+```javascript
+function outed(meet, boss){
+  let sum = 0;
+  let count = 0;
+  for (let key in meet){
+    if(key === boss){
+      sum = sum + meet[key] * 2;
+    } else {
+      sum = sum + meet[key];
+    }
+    count++;
+  }
+  if(sum/count <=5) {
+    return 'Get Out Now!';
+  } else {
+    return 'Nice Work Champ!';
+  }
+}
+```
