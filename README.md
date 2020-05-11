@@ -450,3 +450,28 @@ function outed(meet, boss){
   }
 }
 ```
+*. 28 The Office II - Boredom Score
+(https://www.codewars.com/kata/57ed4cef7b45ef8774000014)
+```JavaScript
+function boredom(staff){
+  let sum = 0;
+  let dep = {
+    accounts: 1,
+    finance: 2,
+    canteen: 10, 
+    regulation: 3, 
+    trading: 6,
+    change: 6,
+    IS: 8,
+    retail: 5,
+    cleaning: 4,
+    'pissing about': 25
+  } 
+  for (let key in staff){
+    sum += dep[staff[key]];
+  }
+  if(sum <= 80){ return 'kill me now';}
+  if(sum < 100 && sum > 80){ return 'i can handle this';}
+  if(sum >= 100){return 'party time!!';}
+}
+```
