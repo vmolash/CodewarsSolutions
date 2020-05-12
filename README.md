@@ -475,3 +475,10 @@ function boredom(staff){
   if(sum >= 100){return 'party time!!';}
 }
 ```
+*. 29 Last
+```JavaScript
+function last(...list){
+let  str = list.join();
+if(str.includes(',')) str = str.split(',');
+return !isNaN(+str[str.length-1]) ? +str[str.length-1] : str[str.length-1];
+}
