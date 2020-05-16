@@ -430,7 +430,7 @@ let s = num.reduce((acc, curr) => acc + curr, 0);
 return (s / amount <= 5) ? 'Get Out Now!' : 'Nice Work Champ!';
 }
 ```
-*. 27'1
+*. 27'1 The office I - Outed (another solution)
 ```javascript
 function outed(meet, boss){
   let sum = 0;
