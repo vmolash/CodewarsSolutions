@@ -507,3 +507,20 @@ function boredom(staff){
   if(sum < 100 && sum > 80){ return 'i can handle this';}
   if(sum >= 100){return 'party time!!';}
 }
+```
+* 30. Breaking chocolate problem
+(https://www.codewars.com/kata/534ea96ebb17181947000ada/train/javascript)
+```JavaScript
+function breakChocolate(n,m) {
+  if( n === 0 || m === 0) return 0;
+  return n * m - 1;
+}
+```
+* 31. Simple Fun #1: Seats in Theater
+(https://www.codewars.com/kata/588417e576933b0ec9000045)
+```JavaScript
+function seatsInTheater(nCols, nRows, col, row) {
+  let x = nRows - row;
+  let y = nCols - col + 1
+  return x * y;
+}
