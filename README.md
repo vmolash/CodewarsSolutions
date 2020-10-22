@@ -507,3 +507,10 @@ function boredom(staff){
   if(sum < 100 && sum > 80){ return 'i can handle this';}
   if(sum >= 100){return 'party time!!';}
 }
+
+* 30. Breaking chocolate problem
+(https://www.codewars.com/kata/534ea96ebb17181947000ada/train/javascript)
+function breakChocolate(n,m) {
+  if( n === 0 || m === 0) return 0;
+  return n * m - 1;
+}
