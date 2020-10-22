@@ -539,3 +539,4 @@ function DNAtoRNA(dna) {
   let rna = dna.replace(/t/gi, 'U');
   return rna;
 }
+```
