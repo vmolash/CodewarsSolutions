@@ -540,3 +540,9 @@ function DNAtoRNA(dna) {
   return rna;
 }
 ```
+* 34. Grasshopper - Order of operations
+```JavaScript
+function orderOperations () {
+  return (2 + 2) * (2 + 2) * 2;
+}
+```
