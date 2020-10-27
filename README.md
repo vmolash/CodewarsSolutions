@@ -555,7 +555,7 @@ function century(year) {
 }
 ```
 * 36. Fix the Bugs (Syntax) - My First Kata
-
+https://www.codewars.com/kata/56aed32a154d33a1f3000018/train/javascript
 ```JavaScript
 function myFirstKata(a, b) {
   if (typeof(a) !== "number" || typeof(b) !== "number") {
