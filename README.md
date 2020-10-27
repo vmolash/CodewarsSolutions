@@ -547,3 +547,9 @@ function orderOperations () {
   return (2 + 2) * (2 + 2) * 2;
 }
 ```
+* 35. Century From Year
+https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
+```JavaScript
+function century(year) {
+  return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
+}
