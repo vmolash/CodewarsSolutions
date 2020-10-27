@@ -553,3 +553,14 @@ https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
 function century(year) {
   return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
 }
+```
+* 36. Fix the Bugs (Syntax) - My First Kata
+https://www.codewars.com/kata/56aed32a154d33a1f3000018/train/javascript
+```JavaScript
+function myFirstKata(a, b) {
+  if (typeof(a) !== "number" || typeof(b) !== "number") {
+    return false;
+  } else {
+    return a % b + b % a;
+  }
+}
