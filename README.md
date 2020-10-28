@@ -564,3 +564,23 @@ function myFirstKata(a, b) {
     return a % b + b % a;
   }
 }
+```
+* 37. Convert a Number to a String!
+https://www.codewars.com/kata/5265326f5fda8eb1160004c8/train/javascript
+```JavaScript
+function numberToString(num) {
+  return num.toString();
+}
+
+function numberToString(num) {
+  return ''+num;
+}
+
+function numberToString(num) {
+  return String(num);
+}
+```
+* 38. Number toString
+https://www.codewars.com/kata/53934feec44762736c00044b/train/javascript
+```JavaScript
+let a = String(123);
