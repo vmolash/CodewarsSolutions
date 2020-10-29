@@ -584,3 +584,13 @@ function numberToString(num) {
 https://www.codewars.com/kata/53934feec44762736c00044b/train/javascript
 ```JavaScript
 let a = String(123);
+
+```
+* 39.Well of Ideas - Easy Version
+https://www.codewars.com/kata/57f222ce69e09c3630000212/train/javascript
+```JavaScript
+function well(x){
+  let a = x.filter(el => el === 'good').length;
+  return (a > 2) ? 'I smell a series!' : (a >= 1) ? 'Publish!' : 'Fail!'
+}
+```
