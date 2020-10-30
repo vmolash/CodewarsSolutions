@@ -594,3 +594,18 @@ function well(x){
   return (a > 2) ? 'I smell a series!' : (a >= 1) ? 'Publish!' : 'Fail!'
 }
 ```
+* 40. Keep Hydrated!
+https://www.codewars.com/kata/582cb0224e56e068d800003c/solutions/javascript
+```JavaScript
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
+```
+ * 41. Rock Paper Scissors!
+https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
+```JavaScript
+ const rps = (p1, p2) => {
+  if(p1===p2) return 'Draw!';
+  if (p1==='rock' && p2==='scissors' || p1==='scissors' && p2==='paper' || p1==='paper' && p2==='rock') return 'Player 1 won!';
+  else return 'Player 2 won!'
+};
