@@ -609,3 +609,20 @@ https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
   if (p1==='rock' && p2==='scissors' || p1==='scissors' && p2==='paper' || p1==='paper' && p2==='rock') return 'Player 1 won!';
   else return 'Player 2 won!'
 };
+```
+* 42. L1: Set Alarm
+https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/javascript
+```JavaScript
+function setAlarm(employed, vacation){
+  return employed && !vacation;
+}
+```
+* 42. Student's Final Grade
+https://www.codewars.com/kata/5ad0d8356165e63c140014d4/train/javascript
+```JavaScript
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) return 100;
+  if (exam > 75 && projects >= 5) return 90;
+  if (exam > 50 && projects >=2) return 75;
+  return 0;
+}
