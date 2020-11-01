@@ -633,3 +633,11 @@ https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/solutions/javascript
 function plural(n) {
   return n !== 1;
 }
+```
+* 44. Days in the year
+https://www.codewars.com/kata/56d6c333c9ae3fc32800070f/train/javascript
+```JavaScript
+function yearDays(y) {
+  return (y%400===0 && Number.isInteger(y/100) || y%4===0 && !Number.isInteger(y/100))  ? `${y} has 366 days` : `${y} has 365 days`;
+}
+
