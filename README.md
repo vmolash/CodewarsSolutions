@@ -626,3 +626,10 @@ function finalGrade (exam, projects) {
   if (exam > 50 && projects >=2) return 75;
   return 0;
 }
+```
+* 43. Plural
+https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/solutions/javascript
+```JavaScript
+function plural(n) {
+  return n !== 1;
+}
