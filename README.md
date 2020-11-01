@@ -640,4 +640,12 @@ https://www.codewars.com/kata/56d6c333c9ae3fc32800070f/train/javascript
 function yearDays(y) {
   return (y%400===0 && Number.isInteger(y/100) || y%4===0 && !Number.isInteger(y/100))  ? `${y} has 366 days` : `${y} has 365 days`;
 }
+```
+* 45. Be Concise I - The Ternary Operator
+https://www.codewars.com/kata/56f3f6a82010832b02000f38/train/javascript
+```JavaScript
+function describeAge(age) {
+  return "You're a(n) " + (age<=12? 'kid' : age<=17? 'teenager' : age<=64? 'adult' : 'elderly');
+}
+```
 
