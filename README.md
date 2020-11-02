@@ -668,4 +668,11 @@ https://www.codewars.com/kata/57202aefe8d6c514300001fd/solutions/javascript
 function saleHotdogs(n){
   return (n<5 ? n*100 : (n>=5 && n<10) ? n*95 : n>=10 ? n*90 : '');
 }
+```
+* 49. Testing, Testing! Return and concatenate a string.
+https://www.codewars.com/kata/5977387e131c07082b000098/train/javascript
+```JavaScript
+function getRes(myScore) {
+  return `${myScore>=70 ? "Congratulations, you have passed!" : "Sorry, you have failed. Better luck next time!"} Thank you for taking part.`
+}
 
