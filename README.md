@@ -682,4 +682,64 @@ https://www.codewars.com/kata/5dd259444228280032b1ed2a/train/javascript
 function solve(x, y) {
   return x % y ? -1 : [y, x - y];
 }
+```
+ * 51. Какой день недели
+ ```JavaScript
+//  Дни недели пронумерованы так: 0 - 'Sunday', 1 - 'Monday', 2 - 'Tuesday', 3 - 'Wednesday', 4 - 'Thursday', 5 - 'Friday', 6 - 'Saturday'.
+
+// Дано целое число k (от 1 до 365). Определите название дня недели для k-го дня года, если считать, что 1 января был понедельник.
+
+// Напишите функцию с именем dayOfWeek, которая принимает число k в качестве аргумента (число от 1 до 365 - номер дня года) и возвращает название дня недели.
+
+// Примеры:
+
+// функция dayOfWeek(3) должна возвратить "Wednesday";
+// функция dayOfWeek(14) должна возвратить "Sunday".
+function dayOfWeek(k){
+    switch(k%7) {
+    case 0:
+      return 'Sunday';
+      break;
+    case 6:
+      return 'Saturday';
+      break;
+     case 5:
+      return 'Friday';
+      break;
+     case 4:
+      return'Thursday';
+      break;
+     case 3:
+      return 'Wednesday';
+      break;
+    case 2:
+      return 'Tuesday';
+      break;
+    case 1:
+      return 'Monday';
+      break;
+  }
+}
+```
+* 52. Basic Calculator
+https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/train/javascript
+```JavaScript
+function calculate(n1, operation, n2) {
+   switch(operation) {
+       case '+':
+         return n1 + n2;
+         break;
+       case '-':
+         return n1 - n2;
+         break;
+       case '*':
+         return n1 * n2;
+         break;
+       case '/':
+         return n2 !== 0 ? n1 / n2 : null;
+         break;
+       default:
+          return null;
+   }
+}
 
