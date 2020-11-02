@@ -653,4 +653,26 @@ function describeAge(age) {
   return `You're a(n) ${age<13 ? 'kid' : age<18 ? 'teenager' : age<65 ? 'adult' : 'elderly'}`;
 }
 ```
+* 46. 101 Dalmatians - squash the bugs, not the dogs!
+https://www.codewars.com/kata/56f6919a6b88de18ff000b36/
+```JavaScript
+function howManyDalmatians(n) {
+  var d = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
+  var respond = (n<=10 ? d[0] : n<=50 ? d[1] : n==101 ? d[3] : d[2]);
+  return respond;
+}
+```
+* 48. Training JS #7: if..else and ternary operator
+https://www.codewars.com/kata/57202aefe8d6c514300001fd/solutions/javascript
+```JavaScript
+function saleHotdogs(n){
+  return (n<5 ? n*100 : (n>=5 && n<10) ? n*95 : n>=10 ? n*90 : '');
+}
+```
+* 49. Testing, Testing! Return and concatenate a string.
+https://www.codewars.com/kata/5977387e131c07082b000098/train/javascript
+```JavaScript
+function getRes(myScore) {
+  return `${myScore>=70 ? "Congratulations, you have passed!" : "Sorry, you have failed. Better luck next time!"} Thank you for taking part.`
+}
 
