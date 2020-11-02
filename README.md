@@ -720,4 +720,26 @@ function dayOfWeek(k){
       break;
   }
 }
+```
+* 52. Basic Calculator
+https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/train/javascript
+```JavaScript
+function calculate(n1, operation, n2) {
+   switch(operation) {
+       case '+':
+         return n1 + n2;
+         break;
+       case '-':
+         return n1 - n2;
+         break;
+       case '*':
+         return n1 * n2;
+         break;
+       case '/':
+         return n2 !== 0 ? n1 / n2 : null;
+         break;
+       default:
+          return null;
+   }
+}
 
