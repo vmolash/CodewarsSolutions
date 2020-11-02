@@ -675,4 +675,11 @@ https://www.codewars.com/kata/5977387e131c07082b000098/train/javascript
 function getRes(myScore) {
   return `${myScore>=70 ? "Congratulations, you have passed!" : "Sorry, you have failed. Better luck next time!"} Thank you for taking part.`
 }
+```
+* 50. GCD sum
+https://www.codewars.com/kata/5dd259444228280032b1ed2a/train/javascript
+```JavaScript
+function solve(x, y) {
+  return x % y ? -1 : [y, x - y];
+}
 
