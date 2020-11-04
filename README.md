@@ -742,4 +742,33 @@ function calculate(n1, operation, n2) {
           return null;
    }
 }
+```
+* 53. No zeros for heros
+https://www.codewars.com/kata/no-zeros-for-heros
+```JavaScript
+function noBoringZeros(n) {
+  while (n % 10 === 0 && n !==0){
+    n /= 10;
+  } 
+  return n;
+}
+```
+* 54. Going to the cinema
+https://www.codewars.com/kata/562f91ff6a8b77dfe900006e/solutions/javascript
+```JavaScript
+function movie(card, ticket, perc) {
+  let count = 0,
+      a = 0,
+      b = card,
+      ticketB = ticket;
+  
+  while(Math.ceil(a) <= Math.ceil(b)) {
+    a = a + ticket;
+    ticketB = ticketB * perc;
+    b += ticketB;
+    count++;
+  }
+  return count;
+};
+```
 
