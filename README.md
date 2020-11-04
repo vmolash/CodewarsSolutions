@@ -742,4 +742,14 @@ function calculate(n1, operation, n2) {
           return null;
    }
 }
+```
+* 53. No zeros for heros
+https://www.codewars.com/kata/no-zeros-for-heros
+```JavaScript
+function noBoringZeros(n) {
+  while (n % 10 === 0 && n !==0){
+    n /= 10;
+  } 
+  return n;
+}
 
