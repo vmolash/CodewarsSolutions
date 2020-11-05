@@ -771,4 +771,12 @@ function movie(card, ticket, perc) {
   return count;
 };
 ```
+* 55. Power of two
+https://www.codewars.com/kata/534d0a229345375d520006a0
+```JavaScript
+function isPowerOfTwo(n){
+  while(n>=2) {
+    n = n/2;
+  } return n === 1;
+}
 
