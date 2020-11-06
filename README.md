@@ -795,7 +795,7 @@ function drawStairs(n) {
   return a;
 }
 ```
-* 57.The Skiponacci Sequence
+* 57. The Skiponacci Sequence
 https://www.codewars.com/kata/580777ee2e14accd9f000165/train/javascript
 ```JavaScript
 function skiponacci(n) {
@@ -805,4 +805,16 @@ function skiponacci(n) {
   }
   return n === 1 ? '1' : fib.map((el,i) => i % 2 ? 'skip' : el).join(' ');
 }
-
+```
+* 57. Money, Money, Money
+https://www.codewars.com/kata/563f037412e5ada593000114/train/javascript
+```JavaScript
+function calculateYears(principal, interest, tax, desired) {
+    // your code
+    var years = 0;
+    while(principal < desired){
+      principal += (principal * interest) * (1 - tax);
+      years++;
+    }
+    return years;
+}
