@@ -780,7 +780,7 @@ function isPowerOfTwo(n){
   } return n === 1;
 }
 ```
-* 56. 
+* 56. Draw stairs
 https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
 ```JavaScript
 function drawStairs(n) {
