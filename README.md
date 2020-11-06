@@ -779,4 +779,30 @@ function isPowerOfTwo(n){
     n = n/2;
   } return n === 1;
 }
+```
+* 56. 
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+```JavaScript
+function drawStairs(n) {
+  let a = '';
+  for (let i = 0; i < n; i++){
+    if(i < n-1) {
+      a += ' '.repeat(i) + 'I\n';
+    } else {
+      a += ' '.repeat(i) + 'I';
+    }
+  }
+  return a;
+}
+```
+* 57.The Skiponacci Sequence
+https://www.codewars.com/kata/580777ee2e14accd9f000165/train/javascript
+```JavaScript
+function skiponacci(n) {
+  let fib = [1,1];
+  for(let i = 2; i < n; i++){
+    fib.push(fib[i-2] + fib[i-1]);
+  }
+  return n === 1 ? '1' : fib.map((el,i) => i % 2 ? 'skip' : el).join(' ');
+}
 
