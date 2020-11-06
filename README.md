@@ -818,3 +818,15 @@ function calculateYears(principal, interest, tax, desired) {
     }
     return years;
 }
+```
+* 58. The wheat/rice and chessboard problem
+https://www.codewars.com/kata/5b0d67c1cb35dfa10b0022c7/train/javascript
+```JavaScript
+function squaresNeeded(grains){
+  let s = 0;
+  while(2 ** s - 1 < grains) {
+    s++;
+  }
+  return s;
+}
+```
