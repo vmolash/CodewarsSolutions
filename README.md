@@ -879,3 +879,15 @@ ffunction padIt(str,n){
     return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
   }
 }
+```
+* 62. Halving Sum
+https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d/train/javascript
+```JavaScript
+function halvingSum(n) {
+  let sum = n;
+  while(n >= 1) {
+    n = Math.trunc(n/2);
+    sum += n;
+  }
+  return sum;
+}
