@@ -830,3 +830,27 @@ function squaresNeeded(grains){
   return s;
 }
 ```
+* 59. Find the divisors!
+https://www.codewars.com/kata/544aed4c4a30184e960010f4/solutions/javascript
+```JavaScript
+function divisors(integer) {
+  var divs = [];
+  
+  for(var i = 2; i < integer; i++) {
+    if(integer % i === 0) {
+      divs.push(i);
+    }
+  }
+  
+  return divs.length ? divs : integer + ' is prime';
+};
+```
+* 60. Round up to the next multiple of 5
+https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/javascript
+```JavaScript
+function roundToNext5(n){
+  while(n % 5){
+    n++;
+  }
+  return n;
+}
