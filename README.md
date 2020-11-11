@@ -854,3 +854,28 @@ function roundToNext5(n){
   }
   return n;
 }
+```
+* 61. Training JS #9: loop statement --while and do..while
+https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+```JavaScript
+function padIt(str,n){
+  let i = 1;
+  while (i <= n) {
+    if(i % 2) {
+      str = '*' + str;
+    } else {
+      str = str + '*';
+    }
+    i++;
+  }
+  return str;
+}
+=======
+ffunction padIt(str,n){
+  // while
+  if (n % 2 === 0) {
+    return '*'.repeat(n/2) + str + '*'.repeat(n/2);
+  } else {
+    return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
+  }
+}
