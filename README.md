@@ -830,3 +830,81 @@ function squaresNeeded(grains){
   return s;
 }
 ```
+* 59. Find the divisors!
+https://www.codewars.com/kata/544aed4c4a30184e960010f4/solutions/javascript
+```JavaScript
+function divisors(integer) {
+  var divs = [];
+  
+  for(var i = 2; i < integer; i++) {
+    if(integer % i === 0) {
+      divs.push(i);
+    }
+  }
+  
+  return divs.length ? divs : integer + ' is prime';
+};
+```
+* 60. Round up to the next multiple of 5
+https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/javascript
+```JavaScript
+function roundToNext5(n){
+  while(n % 5){
+    n++;
+  }
+  return n;
+}
+```
+* 61. Training JS #9: loop statement --while and do..while
+https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
+```JavaScript
+function padIt(str,n){
+  let i = 1;
+  while (i <= n) {
+    if(i % 2) {
+      str = '*' + str;
+    } else {
+      str = str + '*';
+    }
+    i++;
+  }
+  return str;
+}
+=======
+ffunction padIt(str,n){
+  // while
+  if (n % 2 === 0) {
+    return '*'.repeat(n/2) + str + '*'.repeat(n/2);
+  } else {
+    return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
+  }
+}
+```
+* 62. Halving Sum
+https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d/train/javascript
+```JavaScript
+function halvingSum(n) {
+  let sum = n;
+  while(n >= 1) {
+    n = Math.trunc(n/2);
+    sum += n;
+  }
+  return sum;
+}
+```
+* 63.Array Leaders (Array Series #3)
+https://www.codewars.com/kata/5a651865fd56cb55760000e0/train/javascript
+```JavaScript
+var arrayLeaders = num => {
+  let arr = [];
+  for(let i = 0; i < num.length; i++){
+    let sum = 0;
+    for(let j = i + 1  ; j < num.length; j++){
+      sum += num[j];
+    }
+    if(num[i] > sum){
+      arr.push(num[i]);
+    }
+  }
+  return arr;
+}
