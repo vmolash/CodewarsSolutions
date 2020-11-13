@@ -891,3 +891,20 @@ function halvingSum(n) {
   }
   return sum;
 }
+```
+* 63.Array Leaders (Array Series #3)
+https://www.codewars.com/kata/5a651865fd56cb55760000e0/train/javascript
+```JavaScript
+var arrayLeaders = num => {
+  let arr = [];
+  for(let i = 0; i < num.length; i++){
+    let sum = 0;
+    for(let j = i + 1  ; j < num.length; j++){
+      sum += num[j];
+    }
+    if(num[i] > sum){
+      arr.push(num[i]);
+    }
+  }
+  return arr;
+}
