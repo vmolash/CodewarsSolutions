@@ -908,3 +908,19 @@ var arrayLeaders = num => {
   }
   return arr;
 }
+```
+* 64. Draw stairs
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+```JavaScript
+function drawStairs(n) {
+  let a = '';
+  for (let i = 0; i < n; i++){
+    if(i < n-1) {
+      a += ' '.repeat(i) + 'I\n';
+    } else {
+      a += ' '.repeat(i) + 'I';
+    }
+  }
+  return a;
+}
+```
