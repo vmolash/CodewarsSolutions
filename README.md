@@ -908,3 +908,27 @@ var arrayLeaders = num => {
   }
   return arr;
 }
+```
+* 64. Draw stairs
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/javascript
+```JavaScript
+function drawStairs(n) {
+  let a = '';
+  for (let i = 0; i < n; i++){
+    if(i < n-1) {
+      a += ' '.repeat(i) + 'I\n';
+    } else {
+      a += ' '.repeat(i) + 'I';
+    }
+  }
+  return a;
+}
+```
+* 65. DNA to RNA Conversion
+https://www.codewars.com/kata/5556282156230d0e5e000089
+```JavaScript
+function DNAtoRNA(dna) {
+  let rna = dna.replace(/t/gi, 'U');
+  return rna;
+}
+```
