@@ -932,3 +932,17 @@ function DNAtoRNA(dna) {
   return rna;
 }
 ```
+* 66. Difference Of Squares
+https://www.codewars.com/kata/558f9f51e85b46e9fa000025
+```JavaScript
+function differenceOfSquares(n){
+  let sqS = 0,
+      sSq = 0,
+      i = 1;
+  while(i <= n) {
+    sqS += i;
+    sSq += i**2;
+    i++
+  }
+  return sqS**2 - sSq;
+}
