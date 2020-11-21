@@ -968,3 +968,15 @@ function roundToNext5(n){
   return n;
 }
 ```
+* 69. Training JS #10: loop statement --for
+https://www.codewars.com/kata/5721a78c283129e416000999
+```JavaScript
+function sum1_100(){
+  var sum=0,num=1
+  while (num<=100){
+    sum+=num;
+    num++;
+  }
+  return sum;
+}
+```
