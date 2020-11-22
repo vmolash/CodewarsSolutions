@@ -980,3 +980,16 @@ function sum1_100(){
   return sum;
 }
 ```
+* 70. Find the divisors!
+https://www.codewars.com/kata/544aed4c4a30184e960010f4
+```JavaScript
+function divisors(integer) {
+  var arr = [];
+  
+  for(let i = 2; i < integer; i++) {
+    if(integer % i === 0) {
+      arr.push(i);
+    }
+  }
+  return arr.length ? arr : integer + ' is prime';
+};
