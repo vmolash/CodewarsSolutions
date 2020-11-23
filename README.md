@@ -993,3 +993,22 @@ function divisors(integer) {
   }
   return arr.length ? arr : integer + ' is prime';
 };
+```
+```JavaScript
+function isPrime(n){
+  if(n <= 1) return false;
+  for(let i = 2; i < Math.round(Math.sqrt(n) + 1); i++){
+    if(n % i === 0) return false;
+  }
+  return true;
+}
+function divisors(integer) {
+  let arr = [];
+  if(isPrime(integer)) return integer + ' is prime';
+  for(let i = 2; i < integer; i++){
+    if(integer % i === 0) {
+      arr.push(i);
+    }
+  }
+  return arr;
+};
