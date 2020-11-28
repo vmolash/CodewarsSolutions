@@ -1036,3 +1036,13 @@ function numberToPower(number, power){
   } 
   return res;
 }
+// 2d solution
+function numberToPower(number, power){
+  let res = 1;
+  let i = 1;
+  while (i <= power) {
+   res = number * res;
+   i++;
+  } 
+  return res;
+}
