@@ -1046,3 +1046,11 @@ function numberToPower(number, power){
   } 
   return res;
 }
+// 3d solution
+function numberToPower(number, power){
+  let mult = 1;
+  for(let i = 1; i <= power; i++){
+    mult = mult * number;
+  }
+  return mult;
+}
