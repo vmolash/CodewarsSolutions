@@ -1078,3 +1078,11 @@ function isVeryEvenNumber(n) {
   }
   return !(+n%2);
 }
+
+* 75. Total amount of points
+https://www.codewars.com/kata/5bb904724c47249b10000131
+function points(games) {
+  let s = 0;
+  games.forEach((el,i) => el[0] > el[2] ? s +=3 : el[0] === el[2] ? s +=1 : s);
+  return s;
+}
