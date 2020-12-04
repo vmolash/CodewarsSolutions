@@ -1065,3 +1065,24 @@ function padIt(str,n){
     return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
   }
 }
+* 74. "Very Even" Numbers.
+https://www.codewars.com/kata/58c9322bedb4235468000019
+function isVeryEvenNumber(n) {
+  n = String(n);
+  while(n.length > 1) {
+    let sum = 0;
+    for(let i = 0; i < n.length; i++){
+      sum += +n[i];
+    }
+    n = sum + '';
+  }
+  return !(+n%2);
+}
+
+* 75. Total amount of points
+https://www.codewars.com/kata/5bb904724c47249b10000131
+function points(games) {
+  let s = 0;
+  games.forEach((el,i) => el[0] > el[2] ? s +=3 : el[0] === el[2] ? s +=1 : s);
+  return s;
+}
