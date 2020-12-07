@@ -1086,3 +1086,9 @@ function points(games) {
   games.forEach((el,i) => el[0] > el[2] ? s +=3 : el[0] === el[2] ? s +=1 : s);
   return s;
 }
+
+* 76. GCD sum
+https://www.codewars.com/kata/5dd259444228280032b1ed2a
+function solve(s,g){
+   return ((s-g)%g===0 && g%g===0) ? [g, s-g] : -1;
+}
