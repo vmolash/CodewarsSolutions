@@ -1092,3 +1092,12 @@ https://www.codewars.com/kata/5dd259444228280032b1ed2a
 function solve(s,g){
    return ((s-g)%g===0 && g%g===0) ? [g, s-g] : -1;
 }
+
+* 77. Round up to the next multiple of 5
+https://www.codewars.com/kata/55d1d6d5955ec6365400006d
+function roundToNext5(n){
+  while(n % 5 !== 0){
+    n++;
+  }
+  return n;
+}
