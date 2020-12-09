@@ -1101,3 +1101,14 @@ function roundToNext5(n){
   }
   return n;
 }
+
+* 78. Money, Money, Money
+https://www.codewars.com/kata/563f037412e5ada593000114
+function calculateYears(principal, interest, tax, desired) {
+  let y = 0;
+    while(principal < desired){
+      principal = principal + principal * interest - principal * interest * tax;
+      y++;
+    }
+  return y;
+}
