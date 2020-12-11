@@ -1149,7 +1149,7 @@ console.log(numericalTable(4));
 function numericalTriangle(n){
   let res = '';
   for (let i = 1; i <= n; i++) {
-    res = res + (i + ' ').repeat(i).trim() + '\n';
+    res = res + ((i + ' ').repeat(i)).trim() + '\n';
   }
   return res.trim();
 }
