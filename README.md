@@ -1118,3 +1118,23 @@ https://www.codewars.com/kata/557af4c6169ac832300000ba/solutions/javascript
 function removeRotten(arr){
     return arr ? arr.map(x=>x.replace('rotten', '').toLowerCase()) : [] ;
 }
+
+* 80. 
+// Напишите функцию с именем numericalTable, которая принимает число n в качестве аргумента и возвращает таблицу чисел от 1 до n. Каждая строка содержит 5 чисел, разделенных пробелом. Все строки кроме последней, заканчиваются символом \n перевода строки.
+
+// Например, для n = 4 должна быть получена строка:
+
+// "1 1 1 1 1\n2 2 2 2 2\n3 3 3 3 3\n4 4 4 4 4"
+
+function numericalTable(n){
+  let res = '';
+  for (let i = 1; i <= n; i++){
+    for (let j = 1; j <= 5; j++) {
+      res = res + i + ' ';
+    }
+    res = res.trim();
+    res += '\n';
+  }
+  return res.trim();
+}
+console.log(numericalTable(4));
