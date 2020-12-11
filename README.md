@@ -1112,3 +1112,9 @@ function calculateYears(principal, interest, tax, desired) {
     }
   return y;
 }
+
+* 79. Help the Fruit Guy
+https://www.codewars.com/kata/557af4c6169ac832300000ba/solutions/javascript
+function removeRotten(arr){
+    return arr ? arr.map(x=>x.replace('rotten', '').toLowerCase()) : [] ;
+}
