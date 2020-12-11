@@ -1132,7 +1132,8 @@ function numericalTable(n){
     for (let j = 1; j <= 5; j++) {
       res = res + i + ' ';
     }
-    res = res.trim();
+    // res = res.trim();
+    res = res.slice(0,-1);
     res += '\n';
   }
   return res.trim();
