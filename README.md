@@ -1139,3 +1139,19 @@ function numericalTable(n){
   return res.trim();
 }
 console.log(numericalTable(4));
+
+// Нарисовать числовой треугольник
+// "1
+// 2 2
+// 3 3 3
+// 4 4 4 4
+// 5 5 5 5 5"
+function numericalTriangle(n){
+  let res = '';
+  for (let i = 1; i <= n; i++) {
+    res = res + ((i + ' ').repeat(i)).trim() + '\n';
+  }
+  return res.trim();
+}
+
+//let s = 'hello'.repeat(5);
