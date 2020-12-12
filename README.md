@@ -1155,3 +1155,41 @@ function numericalTriangle(n){
 }
 
 //let s = 'hello'.repeat(5);
+
+// "*
+// **
+// ***
+// ****
+// *****
+// ******
+// *******"
+function starTriangle(n){
+  let res = '';
+  for(let i = 1; i <= n; i++){
+    res += '*'.repeat(i) + '\n';
+  }
+  return res.trim();
+}
+console.log(starTriangle(7));
+
+// ****
+// ***
+// **
+// *
+function triangle(n){
+  let res = '';
+  for (let i = n; i > 0; i--){
+    res += '*'.repeat(i) + '\n';
+  }
+  return res.trim();
+}
+console.log(triangle(5));
+
+function triangle(n){
+  let arr = [];
+  for (let i = n; i > 0; i--){
+    arr.push('*'.repeat(i));
+  }
+  return arr;
+}
+console.log(triangle(5));
