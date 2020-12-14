@@ -1193,3 +1193,8 @@ function triangle(n){
   return arr;
 }
 console.log(triangle(5));
+
+* 81. Start with a Vowel
+function vowelStart(str){
+  return str.toLowerCase().replace(/[^0-9a-z]/g, '').replace(/[auioe]/g, el=>' ' + el).trim();
+}
