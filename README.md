@@ -1209,3 +1209,8 @@ function fakeBin(x){
 function removeRotten(bagOfFruits){
   return bagOfFruits && bagOfFruits.length ? bagOfFruits.join(',').replace(/rotten/g, '').toLowerCase().split(',') : [];
 }
+
+* 84. Fake Binary
+function fakeBin(x){
+  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
+}
