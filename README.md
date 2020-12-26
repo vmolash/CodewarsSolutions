@@ -1219,3 +1219,33 @@ function fakeBin(x){
 function shortcut(string){
   return string.replace(/[auioe]/g, '');
 }
+
+* 86. Function 2 - squaring an argument
+https://www.codewars.com/kata/523b623152af8a30c6000027/train/javascript
+function square(x){
+  return x**2;
+}
+
+* 87. Get the mean of an array
+https://www.codewars.com/kata/563e320cee5dddcf77000158/train/javascript
+function getAverage(marks){
+  let sum = 0;
+  for(let i = 0; i < marks.length; i++){
+    sum += marks[i];
+  }
+  return Math.floor(sum/marks.length);
+}
+
+* 88. Split Strings
+https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+function solution(str){
+  if(str.length % 2 !== 0 ){
+     str += '_';
+   }
+  let arr = str.split('');
+  let res = [];
+  for(let i = 0; i < arr.length; i=i+2){
+    res.push(arr[i] + arr[i+1]);
+  }
+  return res;
+}
