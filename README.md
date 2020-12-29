@@ -1258,3 +1258,45 @@ function roundToNext5(n){
   }
   return n;
 }
+
+* 90. 
+// Во многих школах применяется цифровая пятибалльная система оценки успеваемости учащихся:
+
+// 5 - Excellent
+// 4 - Good
+// 3 - Satisfactory
+// 2 - Unsatisfactory
+// 1 - Bad
+// Дана отметка (цифра). Получить словесное значение отметки.
+
+// Создайте переменную mark и присвойте ей значение целого числа от 1 до 5. Создайте переменную name, в которой получите словесное значение отметки. Используя оператор switch, получите в переменной name значения:
+
+// 'Excellent', если mark = 5,
+// 'Good', если mark = 4,
+// 'Satisfactory', если mark = 3,
+// 'Unsatisfactory', если mark = 2,
+// 'Bad', если mark = 1,
+// 'Error', в противном случае.
+// Приведем пример, который принципиально похож на то, что нужно сделать, но адаптируйте его к требованиям задачи:
+
+const mark = 4;
+let name;
+switch (mark) {
+  case 1:
+    name = 'Bad';
+    break;
+  case 2:
+    name = 'Unsatisfactory';
+    break;
+  case 3:
+    name = 'Satisfactory';
+    break;
+  case 4:
+    name = 'Good';
+    break;
+  case 5:
+    name = 'Excellent';
+    break;
+  default:
+    name = 'Error';
+}
