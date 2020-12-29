@@ -1249,3 +1249,12 @@ function solution(str){
   }
   return res;
 }
+
+* 89. Round up to the next multiple of 5
+https://www.codewars.com/kata/55d1d6d5955ec6365400006d
+function roundToNext5(n){
+  while(n % 5 !== 0){
+    n++;
+  }
+  return n;
+}
