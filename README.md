@@ -1300,3 +1300,28 @@ switch (mark) {
   default:
     name = 'Error';
 }
+
+// // Количество планет в Солнечной системе – 8, в порядке удаления от Солнца они располагаются так: Меркурий, Венера, Земля, Марс, Юпитер, Сатурн, Уран и Нептун. По номеру планеты получить ее название.
+
+// Создайте переменную id и присвойте ей значение целого числа от 1 до 8 (номер планеты). Создайте переменную name. Используя оператор switch, получите в переменной name значения:
+
+// 'Mercury', если id = 1
+// 'Venus', если id = 2
+// 'Earth', если id = 3
+// 'Mars', если id = 4
+// 'Jupiter', если id = 5
+// 'Saturn', если id = 6
+// 'Uranus', если id = 7
+// 'Neptune', если id = 8
+const id = 6;
+let name;
+switch (id) {
+  case 1: name = 'Mercury'; break;
+  case 2: name = 'Venus'; break;
+  case 3: name = 'Earth'; break;
+  case 4: name = 'Mars'; break;
+  case 5: name = 'Jupiter'; break;
+  case 6: name = 'Saturn'; break;
+  case 7: name = 'Uranus'; break;
+  case 8: name = 'Neptune'; break;
+}
