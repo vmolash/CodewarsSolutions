@@ -1631,12 +1631,7 @@ unit
 let timer = '';
 let i = 10;
 do {
-  i = i - 1;
   timer = timer + `${i} seconds...`;
-} while (i > 1)
-let timer = '';
-let i = 10;
-do {
   i = i - 1;
-  timer = timer + `${i} seconds...`;
 } while (i > 1)
+timer = timer + '1 second';
