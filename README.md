@@ -1436,3 +1436,9 @@ const power = [];
 for (let i = 0; i < 10; i++) {
   power.push(2**i);
 }
+
+* 102. Сколько получится, если число 2020 десять раз делить на 2?
+let number = 2020;
+for (let i = 1; i <= 10; i++) {
+  number = number / 2;
+}
