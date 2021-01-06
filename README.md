@@ -1424,3 +1424,9 @@ let sum = 0;
 for (let i = 12; i <= 120; i += 3) {
   sum = sum + i;
 }
+
+* 100. Создайте массив из двадцати нулей
+const arr = [];
+for (let i = 0; i < 20; i++) {
+  arr.push(0);
+}
