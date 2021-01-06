@@ -1405,3 +1405,9 @@ let factorial = 1;
 for (let x = 1; x <= 7; x++) {
   factorial = factorial * x;
 }
+
+* 98. Найдите сумму четных чисел от 2 до 200.
+let sum = 0;
+for (let i = 2; i <= 200; i += 2) {
+  sum = sum + i;
+}
