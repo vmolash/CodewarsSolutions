@@ -1376,3 +1376,11 @@ while (i < arr.length) {
   sum = sum + arr[i];
   i++;
 }
+
+* 95. Найдите произведение чисел 0.3 * 0.6 * 0.9 * ... * 3
+let product = 1;
+let x = 0.3;
+while (x <= 3) {
+  product = product * x;
+  x = x + 0.3;
+}
