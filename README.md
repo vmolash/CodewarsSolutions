@@ -1349,3 +1349,13 @@ function howMuchWater(water, load, clothes){
   Number(( water * 1.1 ** (clothes - load)).toFixed(2))
   )
 }
+
+* 92. 
+// Найдите сумму чисел 0.1 + 0.2 + 0.3 + ... + 5
+
+let sum = 0;
+let x = 0.1;
+while (x <= 5) {
+  sum = sum + x;
+  x = x + 0.1;
+}
