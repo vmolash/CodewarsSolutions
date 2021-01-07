@@ -1734,3 +1734,18 @@ Write your solution here
 function percentageValue(number, percent){
   return number * percent / 100;
 }
+
+* 115. Индекс массы тела.
+
+Индекс массы тела рассчитывается путем деления массы тела (в килограммах) на квадрат роста (в метрах квадратных).
+
+Напишите функцию bodyMassIndex, которая принимает два аргумента: weight и height и возвращает индекс массы тела.
+
+Пример:
+
+функция bodyMassIndex(60, 1.65) должна возвратить 22.03856749311295.
+Write your solution here
+unit
+function bodyMassIndex(weight, height){
+  return weight / (height**2);
+}
