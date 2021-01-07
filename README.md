@@ -1722,3 +1722,15 @@ unit
 function distance(x1, y1, x2, y2){
   return ((x2 - x1)**2 + (y2 - y1) ** 2) ** 0.5;
 }
+
+* 114 .Процент от числа
+В ресторане принято оставлять чаевые 15% от суммы заказа. Напишите функцию percentageValue, которая принимает два аргумента: number и percent и возвращает процент от числа.
+
+Примеры:
+
+функция percentageValue(100, 15) возвращает 15% от числа 100, т.е. 15;
+функция percentageValue(200, 15) должна возвратить 30.
+Write your solution here
+function percentageValue(number, percent){
+  return number * percent / 100;
+}
