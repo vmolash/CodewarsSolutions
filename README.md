@@ -1749,3 +1749,19 @@ unit
 function bodyMassIndex(weight, height){
   return weight / (height**2);
 }
+
+* 115. Степень числа
+Напишите функцию powerOfNumber, которая принимает два аргумента: number и power и возвращает значение степени числа.
+
+Примеры:
+
+функция powerOfNumber(2, 2) должна возвратить 4;
+функция powerOfNumber(2, 3) должна возвратить 8;
+функция powerOfNumber(2, -2) должна возвратить 0.25;
+функция powerOfNumber(2, -3) должна возвратить 0.125;
+функция powerOfNumber(10, 0) должна возвратить 1.
+Write your solution here
+unit
+function powerOfNumber(number, power){
+  return number ** power;
+}
