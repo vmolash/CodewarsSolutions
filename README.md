@@ -1765,3 +1765,42 @@ unit
 function powerOfNumber(number, power){
   return number ** power;
 }
+
+* 116.Hello Name!
+
+Напишите функцию с именем greetings, которая возвращает фразу "Hello Name!" для данного name. Если имя не дано или равно пустой строке, вернуть "Hello!"
+
+Примеры:
+
+функция greetings('Alice') должна возвратить приветствие 'Hello Alice!';
+функция greetings('Tom') должна возвратить приветствие 'Hello Tom!';
+функция greetings('') должна возвратить приветствие 'Hello!'.
+функция greetings() должна возвратить приветствие 'Hello!'.
+Приведем пример, который принципиально похож на то, что нужно сделать, но адаптируйте его к требованиям задачи:
+
+function hi(str){
+  if (!str) return 'Hi!';
+   else return `Hi ${str}!`;
+}
+
+function greetings(name){
+  if(!name) return 'Hello!';
+   else return `Hello ${name}!`;
+}
+
+* 117.
+Напишите функцию с именем negative, которая принимает число и возвращает его отрицательным. Если число является отрицательным, то возвращается само число. Примеры:
+
+функция negative(1) должна возвратить -1;
+функция negative(0) должна возвратить 0.
+функция negative(-2) должна возвратить -2.
+Приведем пример, который принципиально похож на то, что нужно сделать, но адаптируйте его к требованиям задачи:
+
+function reverse(num){
+ if (num <= 0) return num;
+ else return -num;
+}
+function negative(num){
+  if (num <= 0) return num;
+  else return -num;
+}
