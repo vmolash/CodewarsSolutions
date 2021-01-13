@@ -1998,3 +1998,26 @@ function solution(str){
   return res;
 }
 
+129. Cумма чисел от n до m.
+question
+Дано два числа n и m. Найдите сумму всех целых чисел от n до m включительно.
+
+Напишите функцию с именем sumFromNToM, которая принимает два числа n, m и возвращает сумму чисел от n до m. В решении используйте цикл for.
+
+Примеры:
+
+функция sumFromNToM(5, 5) должна возвратить 5;
+функция sumFromNToM(5, 2) должна возвратить 0;
+функция sumFromNToM(12, 13) должна возвратить 25;
+функция sumFromNToM(5, 7) должна возвратить 18.
+Write your solution here
+unit
+
+function sumFromNToM(n, m){
+  let sum = 0;
+  for(let i = n; n <= m; n++){
+    sum += n;
+  }
+  return sum;
+}
+
