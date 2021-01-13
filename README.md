@@ -1984,4 +1984,17 @@ const quarterOf = (month) => {
     return 4
   }
 }
+* 128.Split Strings
+https://www.codewars.com/kata/515de9ae9dcfc28eb6000001 
+function solution(str){
+  if(str.length % 2 !== 0 ){
+     str += '_';
+   }
+  let arr = str.split('');
+  let res = [];
+  for(let i = 0; i < arr.length; i=i+2){
+    res.push(arr[i] + arr[i+1]);
+  }
+  return res;
+}
 
