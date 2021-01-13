@@ -2015,9 +2015,29 @@ unit
 
 function sumFromNToM(n, m){
   let sum = 0;
-  for(let i = n; n <= m; n++){
-    sum += n;
+  for(let i = n; i <= m; i++){
+    sum += i;
   }
   return sum;
 }
 
+* 130. question
+Дано два числа n и m. Найдите сумму целых чисел от n до m включительно, кратных числу n.
+
+Напишите функцию с именем sumMultN, которая принимает два числа n, m и возвращает сумму чисел от n до m, кратных числу n. В решении используйте цикл for.
+
+Примеры:
+
+функция sumMultN(5, 5) должна возвратить 5; // 5 = 5
+функция sumMultN(5, 2) должна возвратить 0;
+функция sumMultN(2, 9) должна возвратить 20; // 2 + 4 + 6 + 8 = 20
+функция sumMultN(5, 19) должна возвратить 30. // 5 + 10 + 15 = 30
+Write your solution here
+
+function sumMultN(n, m){
+  let sum = 0;
+  for (let i = n; i <= m; i=i+n){
+    sum += i;
+  }
+  return sum;
+}
