@@ -2041,3 +2041,52 @@ function sumMultN(n, m){
   }
   return sum;
 }
+* 131. Сумма дробей
+question
+Дано число n > 0. Найдите сумму: 1 + 1/2 + 1/3 + 1/4 + ... + 1/n
+
+Напишите функцию с именем sumOfFractionals, которая принимает число n и возвращает сумму дробей, у которых в числителе 1, а в знаменателе - числа от 1 до n. В решении используйте цикл for. Сумму округлите до двух десятичных знаков.
+
+Примеры:
+
+функция sumOfFractionals(1) должна возвратить 1;
+функция sumOfFractionals(5) должна возвратить 2.28;
+функция sumOfFractionals(10) должна возвратить 2.93.
+Write your solution here
+unit
+
+function sumOfFractionals(n){
+  let divisor = 1;
+  let sum = 1;
+  for(let i = 1; i < n; i++) {
+    divisor += 1;
+    sum += 1/divisor;
+  }
+  return +sum.toFixed(2);
+}
+
+* 132. question
+Дано число n > 0. Найдите значение дроби:
+
+fractional
+
+Напишите функцию с именем fractional, которая принимает число n и возвращает значение дроби. В решении используйте цикл for. Значение дроби округлите до трех десятичных знаков.
+
+Примеры:
+
+функция fractional(1) должна возвратить 1; // 1 / 1 = 1
+функция fractional(2) должна возвратить 1.5; // 3 / 2 = 1.5
+функция fractional(3) должна возвратить 1. // 6 / 6 = 1
+функция fractional(4) должна возвратить 0.417. // 10 / 24 = 0.41666666... = 0.417
+Write your solution here
+unit
+
+function fractional(n){
+  let sum = 0;
+  let divisor = 1;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+    divisor *= i;
+  }
+  return +(sum/divisor).toFixed(3);
+}
