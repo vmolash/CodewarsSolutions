@@ -2197,3 +2197,15 @@ function fibonacciNumbers(n){
   }
   return arr;
 }
+
+* 138. Sum of Triangular Numbers
+https://www.codewars.com/kata/580878d5d27b84b64c000b51
+function sumTriangularNumbers(n) {
+  let trNumber = 1;
+  let sum = 1;
+  for(let i = 2; i <= n; i++){
+    trNumber += i;
+    sum += trNumber;
+  }
+  return n < 0 ? 0 : sum;
+}
