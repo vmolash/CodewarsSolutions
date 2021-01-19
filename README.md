@@ -2209,3 +2209,22 @@ function sumTriangularNumbers(n) {
   }
   return n < 0 ? 0 : sum;
 }
+
+* 139.Cумма всех двухзначных чисел.
+question
+Найдите сумму всех положительных целых двухзначных чисел.
+
+Напишите функцию с именем sumOfTwoDigitsNumbers, которая возвращает сумму чисел от 10 до 99 включительно. В решении используйте цикл do while.
+
+Write your solution here
+unit
+function sumOfTwoDigitsNumbers(){
+  let i = 10;
+  let sum = 0;
+  do {
+    sum += i;
+    i++;
+  } while (i <= 99)
+  return sum;
+}
+
