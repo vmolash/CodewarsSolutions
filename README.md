@@ -2501,3 +2501,30 @@ function isElementIncluded(arr, x){
   }
   return result;
 }
+
+* 151. 
+Содержит ли строка данный символ?
+question
+Напишите функцию с именем iSymbInString, которая принимает строку str и символ symb в качестве аргументов и возвращает true, если в строке встречается хотя бы один символ symb, и false в противном случае.
+
+В решении необходимо использовать оператор break. Запрещено использование методов строк.
+
+Указание. Пройдите циклом по строке, и если встретится искомый символ, присвойте некоторой переменной значение true и выполните прерывание цикла.
+
+Примеры:
+
+функция iSymbInString("abcd", "b") должна возвратить true;
+функция iSymbInString("abcd", "f") должна возвратить false.
+
+function iSymbInString(str, symb){
+  let result = false;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === symb) {
+      result = true;
+      break;
+    }
+  }
+  return result;
+}
+
+* 152.
