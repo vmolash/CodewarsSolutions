@@ -2589,3 +2589,13 @@ const quarterOf = (month) => {
     return 4
   }
 }
+
+* 155. How much water do I need?
+https://www.codewars.com/kata/575fa9afee048b293e000287
+function howMuchWater(water, load, clothes){
+ return clothes > load * 2 ? 
+  'Too much clothes' : 
+  (clothes < load ? 'Not enough clothes' : 
+  Number(( water * 1.1 ** (clothes - load)).toFixed(2))
+  )
+}
