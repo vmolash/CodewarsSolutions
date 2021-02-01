@@ -2599,3 +2599,7 @@ function howMuchWater(water, load, clothes){
   Number(( water * 1.1 ** (clothes - load)).toFixed(2))
   )
 }
+* 156.Help the Fruit Guy
+function removeRotten(bagOfFruits){
+  return bagOfFruits && bagOfFruits.length ? bagOfFruits.join(',').replace(/rotten/g, '').toLowerCase().split(',') : [];
+}
