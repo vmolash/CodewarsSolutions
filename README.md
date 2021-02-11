@@ -2645,3 +2645,8 @@ function getAverage(marks){
   }
   return Math.floor(sum/marks.length);
 }
+
+* 161. Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+function remove(s){
+  return s.replace(/!+$/, '');
+}
