@@ -2665,3 +2665,12 @@ function halvingSum(n) {
   }
   return sum;
 }
+* 163. Training JS #9: loop statement --while and do..while
+function padIt(str,n){
+  // while
+  if (n % 2 === 0) {
+    return '*'.repeat(n/2) + str + '*'.repeat(n/2);
+  } else {
+    return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
+  }
+}
