@@ -2655,3 +2655,13 @@ https://www.codewars.com/kata/57eae65a4321032ce000002d
 function fakeBin(x){
   return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
 }
+
+* 162. Halving Sum
+function halvingSum(n) {
+  let sum = n;
+  while(n >= 1) {
+    n = Math.trunc(n/2);
+    sum += n;
+  }
+  return sum;
+}
