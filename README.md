@@ -2674,3 +2674,10 @@ function padIt(str,n){
     return '*'.repeat((n+1)/2) + str + '*'.repeat((n-1)/2);
   }
 }
+*164. Round up to the next multiple of 5
+function roundToNext5(n){
+  while(n % 5 !== 0){
+    n++;
+  }
+  return n;
+}
