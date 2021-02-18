@@ -2681,3 +2681,13 @@ function roundToNext5(n){
   }
   return n;
 }
+* 165.
+function fillArray(n, x) {
+  const arr = [];
+  for(let i = 1; i <= n; i++) {
+    if(i === x) continue;
+    arr.push(i);
+  }
+  return arr;
+}
+console.log(fillArray(10,5));
