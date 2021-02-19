@@ -2691,3 +2691,16 @@ function fillArray(n, x) {
   return arr;
 }
 console.log(fillArray(10,5));
+
+* 166.Split Strings
+ function solution(str){
+  if(str.length % 2 !== 0 ){
+     str += '_';
+   }
+  let arr = str.split('');
+  let res = [];
+  for(let i = 0; i < arr.length; i=i+2){
+    res.push(arr[i] + arr[i+1]);
+  }
+  return res;
+}
