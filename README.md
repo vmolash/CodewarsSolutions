@@ -2913,5 +2913,36 @@ function makeChocolates(small, big, goal) {
   return -1;
 }
 
+* 175. ATM
+https://www.codewars.com/kata/5635e7cb49adc7b54500001c/train/javascript
+function solve(n) {
+  let count = 0;
+  if(n % 10) return -1;
+  while(n>=500){
+    count++;
+    n -= 500;
+  }
+  while(n>=200){
+    count++;
+    n -= 200
+  }
+  while(n>=100){
+    count++;
+    n -= 100
+  }
+  while(n>=50){
+    count++;
+    n -= 50
+  }
+   while(n>=20){
+    count++;
+    n -= 20
+  }
+   while(n>=10){
+    count++;
+    n -= 10
+  }
+  return count;
+}
 
 
