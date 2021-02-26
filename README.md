@@ -2958,4 +2958,14 @@ function solve(n) {
   
 }
 
+* 176. Pack Some Chocolates
+https://www.codewars.com/kata/5f5daf1a209a64001183af9b
+function makeChocolates(small, big, goal) {
+  for(let i = big; i >= 0; i--){
+    for(let j = small; j >= 0; j--){
+      if(i * 5 + j * 2 === goal) return j;
+    } 
+  }
+  return -1;
+}
 
