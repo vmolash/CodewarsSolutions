@@ -2945,4 +2945,17 @@ function solve(n) {
   return count;
 }
 
+function solve(n) {
+  let count = 0;
+  const arr = [500,200,100,50,20,10];
+  for(let banknote of arr){
+    while(n >= banknote){
+      count++;
+      n -= banknote;
+    }
+  }
+  return n ? -1 : count;
+  
+}
+
 
