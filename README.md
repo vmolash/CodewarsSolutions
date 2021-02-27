@@ -2969,3 +2969,13 @@ function makeChocolates(small, big, goal) {
   return -1;
 }
 
+* 177. Heads and Legs
+function animals(heads, legs){
+  let cows = (legs - heads * 2) / 2;
+  let chickens = (heads * 4 - legs) / 2;
+  
+  if(heads === 0 && legs === 0) return [0,0];
+  if(chickens < 0 || cows < 0 || legs > 1000 || heads > 1000 || (legs < 0 && heads < 0) || Math.round(chickens) != chickens || Math.round(cows) != cows) return "No solutions";
+  return [chickens, cows];
+}
+
