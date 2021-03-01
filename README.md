@@ -2979,3 +2979,10 @@ function animals(heads, legs){
   return [chickens, cows];
 }
 
+* 178. Figurate Numbers #2 - Pronic Number
+function isPronic(n){
+  for(let i = 0; i <= n; i++){
+    if(n === i*(i+1)) return true;
+  }
+  return false;
+}
