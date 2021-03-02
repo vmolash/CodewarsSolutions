@@ -2986,3 +2986,12 @@ function isPronic(n){
   }
   return false;
 }
+
+* 179. How much water do I need?
+function howMuchWater(water, load, clothes){
+ return clothes > load * 2 ? 
+  'Too much clothes' : 
+  (clothes < load ? 'Not enough clothes' : 
+  Number(( water * 1.1 ** (clothes - load)).toFixed(2))
+  )
+}
