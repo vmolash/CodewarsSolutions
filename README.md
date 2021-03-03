@@ -2995,3 +2995,9 @@ function howMuchWater(water, load, clothes){
   Number(( water * 1.1 ** (clothes - load)).toFixed(2))
   )
 }
+
+* 180. Help the Fruit Guy
+https://www.codewars.com/kata/557af4c6169ac832300000ba
+function removeRotten(bagOfFruits){
+  return bagOfFruits && bagOfFruits.length ? bagOfFruits.join(',').replace(/rotten/g, '').toLowerCase().split(',') : [];
+}
