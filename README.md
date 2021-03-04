@@ -3001,3 +3001,16 @@ https://www.codewars.com/kata/557af4c6169ac832300000ba
 function removeRotten(bagOfFruits){
   return bagOfFruits && bagOfFruits.length ? bagOfFruits.join(',').replace(/rotten/g, '').toLowerCase().split(',') : [];
 }
+
+* 181. Split Strings
+function solution(str){
+  if(str.length % 2 !== 0 ){
+     str += '_';
+   }
+  let arr = str.split('');
+  let res = [];
+  for(let i = 0; i < arr.length; i=i+2){
+    res.push(arr[i] + arr[i+1]);
+  }
+  return res;
+}
