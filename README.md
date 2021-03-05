@@ -3019,3 +3019,16 @@ function solution(str){
 function fakeBin(x){
   return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
 }
+
+* 184.
+multiplicationTable = function(size) {
+  const arr = [];
+  for(let i = 1; i <= size; i++){
+    let s = [];
+    for(let j = 1; j <= size; j++){
+      s.push(i*j);
+    }
+    arr.push(s);
+  }
+  return arr;
+}
