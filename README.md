@@ -3019,3 +3019,39 @@ function solution(str){
 function fakeBin(x){
   return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
 }
+
+* 184.
+multiplicationTable = function(size) {
+  const arr = [];
+  for(let i = 1; i <= size; i++){
+    let s = [];
+    for(let j = 1; j <= size; j++){
+      s.push(i*j);
+    }
+    arr.push(s);
+  }
+  return arr;
+}
+
+* 185. Complete The Pattern #6 - Odd Ladder
+function pattern(n){
+  let str = '';
+  for(let i = 1; i <= n; i += 2){
+    str = str + i.toString().repeat(i) + '\n';
+  }
+  return str.trim()
+}
+
+* 186.Complete The Pattern #2
+https://www.codewars.com/kata/55733d3ef7c43f8b0700007c
+function pattern(n){
+ let str='';
+  for(let i = 1; i<= n; i++){
+    let s = '';
+    for(let j = n; j >= i; j--){
+      s += j;
+    }
+    str += s + '\n';
+  }
+ return str.trim();
+}
