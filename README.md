@@ -3032,3 +3032,26 @@ multiplicationTable = function(size) {
   }
   return arr;
 }
+
+* 185. Complete The Pattern #6 - Odd Ladder
+function pattern(n){
+  let str = '';
+  for(let i = 1; i <= n; i += 2){
+    str = str + i.toString().repeat(i) + '\n';
+  }
+  return str.trim()
+}
+
+* 186.Complete The Pattern #2
+https://www.codewars.com/kata/55733d3ef7c43f8b0700007c
+function pattern(n){
+ let str='';
+  for(let i = 1; i<= n; i++){
+    let s = '';
+    for(let j = n; j >= i; j--){
+      s += j;
+    }
+    str += s + '\n';
+  }
+ return str.trim();
+}
