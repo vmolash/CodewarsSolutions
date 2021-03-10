@@ -3055,3 +3055,14 @@ function pattern(n){
   }
  return str.trim();
 }
+
+* 187. Sum of Triangular Numbers
+function sumTriangularNumbers(n) {
+  let trNumber = 1;
+  let sum = 1;
+  for(let i = 2; i <= n; i++){
+    trNumber += i;
+    sum += trNumber;
+  }
+  return n < 0 ? 0 : sum;
+}
