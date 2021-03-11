@@ -3066,3 +3066,17 @@ function sumTriangularNumbers(n) {
   }
   return n < 0 ? 0 : sum;
 }
+
+* 188. ATM
+function solve(n) {
+  let count = 0;
+  const arr = [500,200,100,50,20,10];
+  for(let banknote of arr){
+    while(n >= banknote){
+      count++;
+      n -= banknote;
+    }
+  }
+  return n ? -1 : count;
+  
+}
