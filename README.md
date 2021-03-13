@@ -3085,3 +3085,17 @@ function solve(n) {
 function quadratic(x1, x2){
   return [1, -(x1+x2), x1*x2];
 }
+
+* 190. Rock off
+function solve(a, b) {
+  let countA = 0;
+  let countB = 0;
+  for(let i = 0; i < 3; i++){
+    if(a[i] > b[i]) countA++;
+    if(a[i] < b[i]) countB++;
+  }
+  if(countA === countB) return `${countA}, ${countB}: that looks like a "draw"! Rock on!`;
+  if(countA > countB) return `${countA}, ${countB}: Alice made "Kurt" proud!`;
+  if(countA < countB) return `${countA}, ${countB}: Bob made "Jeff" proud!`
+  
+}
