@@ -3099,3 +3099,11 @@ function solve(a, b) {
   if(countA < countB) return `${countA}, ${countB}: Bob made "Jeff" proud!`
   
 }
+
+* 191. What is type of variable?
+function type(value) {
+  console.log(value)
+  if(value === null) return 'null';
+  if(value === undefined) return 'undefined';
+  return value.constructor.name.toLowerCase();
+}
