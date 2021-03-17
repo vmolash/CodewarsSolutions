@@ -3149,3 +3149,15 @@ function changeMaxAndMin(arr){
 }
 console.log(changeMaxAndMin([3, 4, 8, 4, 1, 2, 1,8 ])); // [3, 4, 1, 4, 8, 2, 1,8]
 
+// // c помощью методов
+function changeMaxAndMin(arr) {
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let minInd = arr.indexOf(min);
+  let maxInd = arr.indexOf(max);
+  
+  arr[minInd] = max;
+  arr[maxInd] = min;
+  return arr;
+}
+
