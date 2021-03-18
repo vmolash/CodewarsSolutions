@@ -3117,3 +3117,56 @@ const catchSignChange = arr => {
   }
   return count;
 }
+*193.
+Напишите функцию changeMaxAndMin, которая принимает массив arr в качестве аргумента и возвращает массив, в котором максимальный и минимальный элементы поменялись местами. Если в массиве несколько максимальных или несколько минимальных элементов, поменять местами первые из них. Во всех тестах массив содержит минимум два элемента.
+
+Используйте в решении циклы. Не разрешается использование методов Math.min() и Math.max().
+
+function changeMaxAndMin(arr){
+  let min = arr[0];
+  let minInd = 0;
+  
+  let max = arr[0];
+  let maxInd = 0;
+  
+  for(let i = 1; i < arr.length; i++){
+    if(arr[i] > max) {
+      max = arr[i];
+      maxInd = i;
+    }
+    if(arr[i] < min) {
+      min = arr[i];
+      minInd = i;
+    }
+  }
+  
+  console.log(max, min);
+  console.log(maxInd, minInd);
+
+  arr[maxInd] = min;
+  arr[minInd] = max;
+  return arr;
+}
+console.log(changeMaxAndMin([3, 4, 8, 4, 1, 2, 1,8 ])); // [3, 4, 1, 4, 8, 2, 1,8]
+
+// // c помощью методов
+function changeMaxAndMin(arr) {
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let minInd = arr.indexOf(min);
+  let maxInd = arr.indexOf(max);
+  
+  arr[minInd] = max;
+  arr[maxInd] = min;
+  return arr;
+}
+
+* 194. Plus - minus - plus - plus - ... - Count
+const catchSignChange = arr => {
+  let count = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] >= 0 && arr[i+1] < 0 || arr[i] < 0 && arr[i+1] >=0) count++;
+  }
+  return count;
+}
+
