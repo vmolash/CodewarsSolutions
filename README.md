@@ -3260,3 +3260,26 @@ function countNaN(arr){
   return count;
 }
 
+* 200. Если аргумент функции - NaN
+
+Напишите функцию multBy5, которая принимает величину value в качестве аргумента, и если это NaN, возвращает строку "Value is NaN", иначе умножает величину на 5.
+
+Примеры:
+
+функция multBy5(3) должна возвратить 15;
+функция multBy5(0) должна возвратить 0;
+функция multBy5(true) должна возвратить 5;
+функция multBy5(false) должна возвратить 0;
+функция multBy5(null) должна возвратить 0;
+функция multBy5('a') должна возвратить NaN;
+функция multBy5(undefined) должна возвратить NaN.
+функция multBy5('a' * 5) должна возвратить "Value is NaN";
+функция multBy5(NaN) должна возвратить "Value is NaN";
+функция multBy5(+'hello') должна возвратить "Value is NaN".
+
+function multBy5(value){
+  if(Number.isNaN(value)) return 'Value is NaN';
+  else return value * 5;
+}
+
+
