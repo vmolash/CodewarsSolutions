@@ -3225,4 +3225,14 @@ function isArgNaN(value){
   else return value;
 }
 
+* 197. Filter the number
+https://www.codewars.com/kata/55b051fac50a3292a9000025/solutions/javascript
+var FilterString = function(value) {
+  let num = '';
+  for(let i = 0; i < value.length; i++){
+    if(!isNaN(value[i]) && typeof +value[i] === 'number') num += value[i];
+  }
+  return +num;
+}
+
 
