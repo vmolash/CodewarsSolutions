@@ -3235,4 +3235,10 @@ var FilterString = function(value) {
   return +num;
 }
 
+* 198.Find variable which breaks strict comparison!
+https://www.codewars.com/kata/560f8d41cf6e1fe5c900002e/solutions/javascript
+function findStrangeValue() {
+  return NaN;
+}
+
 
