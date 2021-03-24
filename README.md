@@ -3360,4 +3360,10 @@ function longest(s1, s2) {
   arr = arr.filter((el,i) => i === arr.indexOf(el)).sort().join('');
   return arr;
 }
+* 207. Unique numbers
+https://www.codewars.com/kata/568f9bd9cbe89334c900000c/train/javascript
+function uniqueNumbers(numbersArray) {
+  const arr = numbersArray.filter((el,i) => i === numbersArray.indexOf(el))
+  return arr;
+}
 
