@@ -3345,3 +3345,31 @@ function calculate(a, op, b) {
  return result; 
 }
 
+* 205. Find Duplicates
+https://www.codewars.com/kata/5558cc216a7a231ac9000022/train/javascript
+function duplicates(arr) {
+  arr = arr.filter((el,i) => arr.indexOf(el) !== arr.lastIndexOf(el) && i !== arr.indexOf(el));
+  arr = arr.filter((el,i) => i === arr.indexOf(el));
+  return arr;
+}
+* 206. Two to One
+https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+function longest(s1, s2) {
+  let a = s1 + s2;
+  let arr = a.split('');
+  arr = arr.filter((el,i) => i === arr.indexOf(el)).sort().join('');
+  return arr;
+}
+* 207. Unique numbers
+https://www.codewars.com/kata/568f9bd9cbe89334c900000c/train/javascript
+function uniqueNumbers(numbersArray) {
+  const arr = numbersArray.filter((el,i) => i === numbersArray.indexOf(el))
+  return arr;
+}
+
+* 208. Train to remove duplicates from an array with filter()
+https://www.codewars.com/kata/58308360aeb69a460b0002b2/train/javascript
+function unique(arr) {
+  return arr.filter((el,i) => i === arr.indexOf(el));
+}
+
