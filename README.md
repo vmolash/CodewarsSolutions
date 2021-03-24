@@ -3345,3 +3345,19 @@ function calculate(a, op, b) {
  return result; 
 }
 
+* 205. Find Duplicates
+https://www.codewars.com/kata/5558cc216a7a231ac9000022/train/javascript
+function duplicates(arr) {
+  arr = arr.filter((el,i) => arr.indexOf(el) !== arr.lastIndexOf(el) && i !== arr.indexOf(el));
+  arr = arr.filter((el,i) => i === arr.indexOf(el));
+  return arr;
+}
+* 206. Two to One
+https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+function longest(s1, s2) {
+  let a = s1 + s2;
+  let arr = a.split('');
+  arr = arr.filter((el,i) => i === arr.indexOf(el)).sort().join('');
+  return arr;
+}
+
