@@ -3328,6 +3328,19 @@ function calculate(a, op, b) {
       case '/': return b === 0 ? null : a / b;
       default: return null;
   }
+
+  * 205. Total amount of points
+  https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+  function points(games) {
+  let point = 0;
+  for(let el of games){
+    let x = +el[0];
+    let y = +el[2];
+    if(x > y) point += 3;
+    if(x === y) point += 1;
+  }
+  return point;
+}
  
  return result; 
 }
