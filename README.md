@@ -3287,5 +3287,21 @@ https://www.codewars.com/kata/5d59576768ba810001f1f8d6
 function quadratic(x1, x2){
   return [1, -(x1+x2), x1*x2];
 }
+* 202. How old will I be in 2099?
+https://www.codewars.com/kata/5761a717780f8950ce001473/train/javascript
+function  calculateAge(birth, current) {
+  let age = current - birth;
+  if(age === 0) {
+    return 'You were born this very year!';
+  } else if(age === 1) {
+    return 'You are 1 year old.';
+  } else if(age === -1) {
+    return 'You will be born in 1 year.'
+  } else if(age > 1) {
+    return `You are ${age} years old.`;
+  } else if(age < 0) {
+    return `You will be born in ${-age} years.`
+  }
+}
 
 
