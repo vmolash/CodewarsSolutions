@@ -3373,3 +3373,9 @@ function unique(arr) {
   return arr.filter((el,i) => i === arr.indexOf(el));
 }
 
+* 209. Unique numbers
+function uniqueNumbers(numbersArray) {
+  const arr = numbersArray.filter((el,i) => i === numbersArray.indexOf(el))
+  return arr;
+}
+
