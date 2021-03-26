@@ -3379,3 +3379,16 @@ function uniqueNumbers(numbersArray) {
   return arr;
 }
 
+* 210. Fuel Calculator
+function fuelPrice(litres, pricePerLitre) {
+  let discount;
+  
+  if(litres < 2) discount = 0;
+  else if (litres < 4) discount = 0.05;
+  else if (litres < 6) discount = 0.10;
+  else if (litres < 8) discount = 0.15;
+  else if (litres < 10) discount = 0.20;
+  else discount = 0.25;
+  return +(litres * (pricePerLitre - discount)).toFixed(2);
+}
+
