@@ -3392,3 +3392,17 @@ function fuelPrice(litres, pricePerLitre) {
   return +(litres * (pricePerLitre - discount)).toFixed(2);
 }
 
+* 211. Debug Basic Calculator
+function calculate(a, op, b) {
+ let result;
+  switch (op) {
+      case '+': return a + b;
+      case '-': return a - b;
+      case '*': return a * b;
+      case '/': return b === 0 ? null : a / b;
+      default: return null;
+  }
+ 
+ return result; 
+}
+
