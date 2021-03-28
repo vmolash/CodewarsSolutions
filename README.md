@@ -3392,3 +3392,29 @@ function fuelPrice(litres, pricePerLitre) {
   return +(litres * (pricePerLitre - discount)).toFixed(2);
 }
 
+* 211. Debug Basic Calculator
+function calculate(a, op, b) {
+ let result;
+  switch (op) {
+      case '+': return a + b;
+      case '-': return a - b;
+      case '*': return a * b;
+      case '/': return b === 0 ? null : a / b;
+      default: return null;
+  }
+ 
+ return result; 
+}
+
+* 212. Total amount of points
+function points(games) {
+  let point = 0;
+  for(let el of games){
+    let x = +el[0];
+    let y = +el[2];
+    if(x > y) point += 3;
+    if(x === y) point += 1;
+  }
+  return point;
+}
+
