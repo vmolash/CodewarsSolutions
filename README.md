@@ -3406,3 +3406,15 @@ function calculate(a, op, b) {
  return result; 
 }
 
+* 212. Total amount of points
+function points(games) {
+  let point = 0;
+  for(let el of games){
+    let x = +el[0];
+    let y = +el[2];
+    if(x > y) point += 3;
+    if(x === y) point += 1;
+  }
+  return point;
+}
+
