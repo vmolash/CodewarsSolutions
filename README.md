@@ -3422,4 +3422,18 @@ function points(games) {
   games.forEach((el,i) => el[0] > el[2] ? s +=3 : el[0] === el[2] ? s +=1 : s);
   return s;
 }
+function points(games) {
+    let p = 0;
+    for (let i = 0; i < games.length; i++) {
+        let each = games[i].split(":");
+        if (each[0] > each[1]) {
+            p += 3;
+        } else if (each[0] == each[1]) {
+            p += 1;
+        } else {
+            p += 0;
+        }
+    }
+    return p;
+}
 
