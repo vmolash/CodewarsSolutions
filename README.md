@@ -3457,4 +3457,11 @@ function isPowerOfTwo(n){
   }
   return n === 1;
 }
+ * 215.Calculate mean and concatenate string
+ function mean(lst){
+  const num = lst.filter(el => !isNaN(el)).map(el => +el).reduce((a,b) => a+b,0) / 10;
+  const str = lst.filter(el => isNaN(el)).join('');
+  console.log(num, str);
+  return [num, str];
+}
 
