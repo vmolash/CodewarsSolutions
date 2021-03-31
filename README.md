@@ -3437,3 +3437,24 @@ function points(games) {
     return p;
 }
 
+* 213."Very Even" Numbers.
+function isVeryEvenNumber(n) {
+  while(n > 9) {
+    let sum = 0;
+    while(n > 0) {
+      sum += n % 10;
+      n = (n - n % 10) / 10;
+    }
+    n = sum;
+  }
+  return n % 2 === 0;
+}
+
+* 214. Power of two
+function isPowerOfTwo(n){
+  while(n % 2 === 0 && n !== 0) {
+    n = n / 2;
+  }
+  return n === 1;
+}
+
