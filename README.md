@@ -3375,6 +3375,7 @@ function divBy9(ns){
   return sum % 9 === 0;
 }
 
+
 * 208. Train to remove duplicates from an array with filter()
 https://www.codewars.com/kata/58308360aeb69a460b0002b2/train/javascript
 function unique(arr) {
@@ -3472,4 +3473,17 @@ function isPowerOfTwo(n){
   console.log(num, str);
   return [num, str];
 }
+
+* 216. Является ил строка из несколькиъ слов палиндромо?
+  function isPalindrome(str){
+    let t = '';
+    let s = '';
+    for(let i = str.length - 1; i >= 0; i--){
+      if(str[i] !== ' ') {
+        t = t + str[i];
+        s = str[i] + s;
+      }
+    }
+    return t === s;
+  }
 
