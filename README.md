@@ -3366,6 +3366,14 @@ function uniqueNumbers(numbersArray) {
   const arr = numbersArray.filter((el,i) => i === numbersArray.indexOf(el))
   return arr;
 }
+* 208. Divisible by 9
+function divBy9(ns){
+  let sum = 0;
+  for(let el of ns) {
+    sum += +el;
+  }
+  return sum % 9 === 0;
+}
 
 * 208. Train to remove duplicates from an array with filter()
 https://www.codewars.com/kata/58308360aeb69a460b0002b2/train/javascript
