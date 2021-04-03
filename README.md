@@ -3492,6 +3492,26 @@ function isPowerOfTwo(n){
   let sum1 = arr.reduce((acc,el) => acc + el, 0);
   let sum2 = mixArr.reduce((acc,el) => acc + el, 0);
   return sum1 - sum2;
-  
 }
+
+* 218. String
+// you are given a string: candies.
+// Each time you see the same candy consecutively, you pop them, from left to right.
+// candies = "aabdbbd"
+// "aabdbbd" - (pop 2 a's)- > "bdbbd" - (pop 2 b's) -> "bdd" - (pop 2 d's) -> "b"
+// "aa" -> ""
+// "aba" -> "aba"
+// "aaa" -> "a"
+
+const str = "aabdbbd";
+const arr = str.split('');
+
+for(let i = 0; i < arr.length; i++){
+  console.log(i);
+  if(arr[i] === arr[i+1]) {
+    arr.splice(i,2);
+    i = i - 2;
+  }
+}
+console.log(arr.join(''));
 
