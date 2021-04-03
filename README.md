@@ -3487,3 +3487,11 @@ function isPowerOfTwo(n){
     return t === s;
   }
 
+  * 217.Lost number in number sequence
+  function findDeletedNumber(arr, mixArr) {
+  let sum1 = arr.reduce((acc,el) => acc + el, 0);
+  let sum2 = mixArr.reduce((acc,el) => acc + el, 0);
+  return sum1 - sum2;
+  
+}
+
