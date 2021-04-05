@@ -3531,3 +3531,19 @@ function countInfinity(arr){
   return count;
 }
 
+* 220. Является ли результат операции деления двух чисел конечным числом?
+
+Напишите функцию checkingForFinite, которая принимает два числа a и b в качестве аргументов, выполняет деление числа a на число b и проверяет результат деления (частное чисел) на конечность. Функция должна возвратить true, если результат - конечное число, и false - в противном случае.
+
+Примеры:
+
+функция checkingForFinite(4, 2) должна возвратить true;
+функция checkingForFinite(3, 0) должна возвратить false;
+функция checkingForFinite(-1, 0) должна возвратить false.
+Write your solution below
+function checkingForFinite(a, b){
+  return Number.isFinite(a/b);
+}
+1function checkingForFinite(a, b){
+2  return Number.isFinite(a/b);
+3}
