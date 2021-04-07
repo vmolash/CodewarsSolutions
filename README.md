@@ -3566,3 +3566,10 @@ function race(v1, v2, g) {
   console.log(sec);
   return [hour, min, sec];
 }
+
+* 223. Find the next perfect square!
+function findNextSquare(sq) {
+  let a = Math.sqrt(sq);
+  if(a % 1 !== 0) return -1;
+  return (a + 1) ** 2;
+}
