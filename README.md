@@ -3554,5 +3554,15 @@ function barTriang(p1, p2, p3){
   let y0 = +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4);
   
   return [x0, y0];
-  
+}
+
+* 222. Tortoise racing
+function race(v1, v2, g) {
+  if(v1 >= v2) return null;
+  let time = g / (v2 - v1) * 3600;
+  let hour = Math.trunc(time / 3600);
+  let min = Math.trunc(time % 3600 / 60);
+  let sec = Math.trunc(time % 60);
+  console.log(sec);
+  return [hour, min, sec];
 }
