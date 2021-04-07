@@ -3547,3 +3547,29 @@ function checkingForFinite(a, b){
 1function checkingForFinite(a, b){
 2  return Number.isFinite(a/b);
 3}
+
+* 221.Localize The Barycenter of a Triangle
+function barTriang(p1, p2, p3){
+  let x0 = +((p1[0] + p2[0] + p3[0]) / 3).toFixed(4);
+  let y0 = +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4);
+  
+  return [x0, y0];
+}
+
+* 222. Tortoise racing
+function race(v1, v2, g) {
+  if(v1 >= v2) return null;
+  let time = g / (v2 - v1) * 3600;
+  let hour = Math.trunc(time / 3600);
+  let min = Math.trunc(time % 3600 / 60);
+  let sec = Math.trunc(time % 60);
+  console.log(sec);
+  return [hour, min, sec];
+}
+
+* 223. Find the next perfect square!
+function findNextSquare(sq) {
+  let a = Math.sqrt(sq);
+  if(a % 1 !== 0) return -1;
+  return (a + 1) ** 2;
+}
