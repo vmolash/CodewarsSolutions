@@ -3547,3 +3547,12 @@ function checkingForFinite(a, b){
 1function checkingForFinite(a, b){
 2  return Number.isFinite(a/b);
 3}
+
+* 221.Localize The Barycenter of a Triangle
+function barTriang(p1, p2, p3){
+  let x0 = +((p1[0] + p2[0] + p3[0]) / 3).toFixed(4);
+  let y0 = +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4);
+  
+  return [x0, y0];
+  
+}
