@@ -3573,3 +3573,8 @@ function findNextSquare(sq) {
   if(a % 1 !== 0) return -1;
   return (a + 1) ** 2;
 }
+
+* 224.Sum of integers in string
+function sumOfIntegersInString(s){
+  return s.replace(/[^0-9]/gi, ' ').split(' ').map(el => +el).reduce((a,b)=> a+b,0);
+}
