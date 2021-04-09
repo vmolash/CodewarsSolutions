@@ -3578,3 +3578,16 @@ function findNextSquare(sq) {
 function sumOfIntegersInString(s){
   return s.replace(/[^0-9]/gi, ' ').split(' ').map(el => +el).reduce((a,b)=> a+b,0);
 }
+
+* 225.Coding Meetup #14 - Higher-Order Functions Series - Order the food
+function orderFood(list) {
+  let obj = {};
+  for(let el of list){
+    if(obj[el.meal]){
+      obj[el.meal]++;
+    } else {
+      obj[el.meal] = 1;
+    }
+  }
+  return obj;
+}
