@@ -3591,3 +3591,9 @@ function orderFood(list) {
   }
   return obj;
 }
+*226. Vasya in his free time
+function CalculateString( n,  nums){
+  let ones = nums.replace(/0/g, '').length;
+  let zeroes = n - ones;
+  return Math.abs(ones - zeroes);
+}
