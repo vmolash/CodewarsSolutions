@@ -3597,3 +3597,7 @@ function CalculateString( n,  nums){
   let zeroes = n - ones;
   return Math.abs(ones - zeroes);
 }
+*227.Disemvowel Trolls
+function disemvowel(str) {
+  return str.replace(/[auoie]/gi, '');
+}
