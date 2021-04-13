@@ -3615,3 +3615,20 @@ const canConstruct = function(s, k) {
     }
     return odd <= k && s.length >=k;
 };
+
+* 229. Является ли целое число безопасным числом для вычислений?
+Напишите функцию safeNumber, которая принимает целое число x, и возвращает true, если переменная x содержит безопасное целочисленное значение, и false - в противном случае.
+
+Примеры:
+
+функция safeNumber(20000) должна возвратить true;
+функция safeNumber(9007199254740991) должна возвратить true;
+функция safeNumber(9007199254740992) должна возвратить false.
+Write your solution below
+function safeNumber(x){
+  return Number.isSafeInteger(x);
+}
+1function safeNumber(x){
+2  return Number.isSafeInteger(x);
+3}
+
