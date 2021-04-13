@@ -3601,3 +3601,17 @@ function CalculateString( n,  nums){
 function disemvowel(str) {
   return str.replace(/[auoie]/gi, '');
 }
+* 228.
+const canConstruct = function(s, k) {
+    let odd = 0;
+    const obj = {};
+    for( const c of s ){
+        obj[c] = (obj[c] || 0) + 1;
+        if(obj[c] % 2){
+            odd++;
+        } else {
+            odd--;
+        }
+    }
+    return odd <= k && s.length >=k;
+};
