@@ -3628,7 +3628,67 @@ Write your solution below
 function safeNumber(x){
   return Number.isSafeInteger(x);
 }
-1function safeNumber(x){
-2  return Number.isSafeInteger(x);
-3}
+function safeNumber(x){
+  return Number.isSafeInteger(x);
+}
+
+* 230. Подсчитайте количество безопасных значений в массиве
+Напишите функцию countOfSafeNumbers, которая принимает массив arr в качестве аргумента и возвращает количество элементов массива, являющихся числами, безопасными для вычислений.
+
+Примеры:
+
+функция countOfSafeNumbers([Infinity, 9007199254740991, -Infinity, 0]) должна возвратить 2;
+функция countOfSafeNumbers([1, 3, 10, -10, NaN) должна возвратить 4;
+функция countOfSafeNumbers([Infinity, NaN]) должна возвратить 0.
+Write your solution below
+function countOfSafeNumbers(arr){
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(Number.isSafeInteger(arr[i])){
+      count++;
+    }
+  }
+  return count;
+}
+function countOfSafeNumbers(arr){
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(Number.isSafeInteger(arr[i])){
+      count++;
+    }
+  }
+  return count;
+}
+
+* 231.  Является ли произведение двух чисел безопасным числом?
+Напишите функцию checkingForfSafe, которая принимает две величины a и b в качестве аргументов, выполняет умножение числа a на число b, и проверяет, является ли произведение безопасным числом. Функция должна возвратить true, если произведение чисел - безопасное число, и false - в противном случае.
+
+Примеры:
+
+функция checkingForfSafe(4000, 2000) должна возвратить true;
+функция checkingForfSafe(9007199254740991, 10) должна возвратить false;
+функция checkingForfSafe(Infinity, 2) должна возвратить false.
+Write your solution below
+function checkingForfSafe(a, b){
+  return Number.isSafeInteger(a * b);
+}
+function checkingForfSafe(a, b){
+  return Number.isSafeInteger(a * b);
+}
+
+* 232. Верно ли, что 0.1 + 0.2 === 0.3? Все не так просто!
+
+Напишите функцию isSumEqualsNumber, которая принимает три дробных числа a, b, c в качестве аргументов, и проверяет, верно ли, что сумма двух дробных чисел равна третьему дробному числу, т.е. равна ли сумма чисел a и b числу c.
+
+Функци должна возвратить true (если сумма чисел после округления равна третьему числу) или false - в противном случае.
+
+Замечание. Выполните округление суммы чисел и третьего числа до двух знаков в дробной части с помощью метода toFixed(n).
+
+Пример:
+
+функция isSumEqualsNumber(0.1, 0.2, 0.3) должна возвратить true.
+Write your solution below
+function isSumEqualsNumber(a, b, c){
+  return +(a + b).toFixed(2) === c;
+}
 
