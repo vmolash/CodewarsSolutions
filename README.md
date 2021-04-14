@@ -3699,4 +3699,13 @@ function holycats(input){
   }
   return holy;
 }
+*234.Backspaces in string
+function cleanString(s) {
+	let arr = [];
+  for(let el of s){
+    if(el !== '#') arr.push(el);
+    else arr.pop();
+  }
+  return arr.join('');
+};
 
