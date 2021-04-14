@@ -3691,4 +3691,12 @@ Write your solution below
 function isSumEqualsNumber(a, b, c){
   return +(a + b).toFixed(2) === c;
 }
+* 233.Holy cats
+function holycats(input){
+  const holy = [];
+  for(let el of input){
+    if(el !== 'wicked' && el !== 'normal') holy.push(el);
+  }
+  return holy;
+}
 
