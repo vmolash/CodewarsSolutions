@@ -3709,3 +3709,22 @@ function cleanString(s) {
   return arr.join('');
 };
 
+* 235. String doubles
+function doubles(s){
+  const arr = [s[0]];
+  for(let i = 1; i < s.length; i++){
+    if(s[i] === arr[arr.length-1]) arr.pop();
+    else arr.push(s[i]);
+  }
+  return arr.join('');
+}
+
+* 236. remove the minimun
+function removeSmallest(numbers) {
+  let min = Math.min(...numbers);
+  let index = numbers.indexOf(min);
+  let copy = numbers.slice();
+  copy.splice(index, 1);
+  return copy;
+}
+
