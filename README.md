@@ -3728,3 +3728,9 @@ function removeSmallest(numbers) {
   return copy;
 }
 
+* 237. Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  if(sonYearsOld * 2 > dadYearsOld) return sonYearsOld * 2 - dadYearsOld;
+  else return dadYearsOld - sonYearsOld * 2;
+}
+
