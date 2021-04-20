@@ -3741,3 +3741,12 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 function findNeedle(haystack) {
   return `found the needle at position ` + haystack.indexOf('needle');
 }
+* 239. Backspaces in string
+function cleanString(s) {
+  let arr = [];
+  for(let el of s){
+    if(el !== '#') arr.push(el);
+    else arr.pop();
+  }
+  return arr.join('');
+};
