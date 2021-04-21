@@ -3764,3 +3764,8 @@ console.log(users);
 // cортировка по возрасту (по 2му параметру)
 users.sort((a,b) => a[1] - b[1]);
 console.log(users);
+
+*241. sort
+let arr = ['grapefruit', 'banana', 'pear', 'lime', 'kiwi', 'apple'];
+arr.sort((a,b) => a.length===b.length? (a>b?1:-1) : a.length-b.length);
+console.log(arr);
