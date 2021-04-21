@@ -3750,3 +3750,17 @@ function cleanString(s) {
   }
   return arr.join('');
 };
+
+* 240. sort
+let words = ['lime', 'grapefruit', 'banana', 'aplle', 'grape'];
+// отсортировать в порядке возрастания длин слов
+words.sort((a,b) => a.length - b.length);
+console.log(words);
+
+let users = [ ['anna', 25], ['bob', 12], ['alice', 17] ];
+// cортировка по именам (по 1му параметру)
+users.sort();
+console.log(users);
+// cортировка по возрасту (по 2му параметру)
+users.sort((a,b) => a[1] - b[1]);
+console.log(users);
