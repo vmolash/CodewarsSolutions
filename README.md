@@ -3769,3 +3769,15 @@ console.log(users);
 let arr = ['grapefruit', 'banana', 'pear', 'lime', 'kiwi', 'apple'];
 arr.sort((a,b) => a.length===b.length? (a>b?1:-1) : a.length-b.length);
 console.log(arr);
+
+* 242.Training JS #9: loop statement --while and do..while
+function padIt(str,n){
+  let i = 0;
+  while(i < n) {
+    if (i % 2 === 0) {
+      str = '*' + str;
+    } else str = str + '*';
+    i++;
+  }
+  return str;
+}
