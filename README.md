@@ -3781,3 +3781,9 @@ function padIt(str,n){
   }
   return str;
 }
+
+* 243. Training JS #34: methods of Math---pow() sqrt() and cbrt()
+function cutCube(volume,n){
+  if(Math.cbrt(n) % 1 !== 0) return false;
+  return Number.isInteger(Math.cbrt(volume/n));
+}
