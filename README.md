@@ -3805,3 +3805,7 @@ function isSquare(x){
 function squareRoot(x){
   return x >= 0 ? +Math.sqrt(x).toFixed(2) : "Root of a negative number is NaN";
 }
+* 247. Вычислите значение выражения.
+function expression(a, b, c){
+  return +(Math.sqrt(a) + Math.sqrt(Math.abs(b-c)) / (a**3 + b**2 + c**4)).toFixed(2);
+}
