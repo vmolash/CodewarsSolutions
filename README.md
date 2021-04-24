@@ -3796,3 +3796,8 @@ function quadraticEquation(a, b, c){
   let x2 = (-b - Math.sqrt(D))/(2*a);
   return [x1,x2];
 }
+* 245. Является ли данное число квадратом некоторого числа?
+function isSquare(x){
+  let y = Math.sqrt(x);
+  return y % 1 ? `${x} is not a square` : `${x} is square of ${y}`
+}
