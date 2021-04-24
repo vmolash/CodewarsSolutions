@@ -3787,3 +3787,12 @@ function cutCube(volume,n){
   if(Math.cbrt(n) % 1 !== 0) return false;
   return Number.isInteger(Math.cbrt(volume/n));
 }
+
+* 244. Решение квадратного уравнения
+function quadraticEquation(a, b, c){
+  let D = b**2 - 4*a*c;
+  if(D < 0) return "There are no roots";
+  let x1 = (-b + Math.sqrt(D))/(2*a);
+  let x2 = (-b - Math.sqrt(D))/(2*a);
+  return [x1,x2];
+}
