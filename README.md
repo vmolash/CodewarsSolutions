@@ -3764,3 +3764,48 @@ console.log(users);
 // cортировка по возрасту (по 2му параметру)
 users.sort((a,b) => a[1] - b[1]);
 console.log(users);
+
+*241. sort
+let arr = ['grapefruit', 'banana', 'pear', 'lime', 'kiwi', 'apple'];
+arr.sort((a,b) => a.length===b.length? (a>b?1:-1) : a.length-b.length);
+console.log(arr);
+
+* 242.Training JS #9: loop statement --while and do..while
+function padIt(str,n){
+  let i = 0;
+  while(i < n) {
+    if (i % 2 === 0) {
+      str = '*' + str;
+    } else str = str + '*';
+    i++;
+  }
+  return str;
+}
+
+* 243. Training JS #34: methods of Math---pow() sqrt() and cbrt()
+function cutCube(volume,n){
+  if(Math.cbrt(n) % 1 !== 0) return false;
+  return Number.isInteger(Math.cbrt(volume/n));
+}
+
+* 244. Решение квадратного уравнения
+function quadraticEquation(a, b, c){
+  let D = b**2 - 4*a*c;
+  if(D < 0) return "There are no roots";
+  let x1 = (-b + Math.sqrt(D))/(2*a);
+  let x2 = (-b - Math.sqrt(D))/(2*a);
+  return [x1,x2];
+}
+* 245. Является ли данное число квадратом некоторого числа?
+function isSquare(x){
+  let y = Math.sqrt(x);
+  return y % 1 ? `${x} is not a square` : `${x} is square of ${y}`
+}
+* 246. Корень квадратный из числа
+function squareRoot(x){
+  return x >= 0 ? +Math.sqrt(x).toFixed(2) : "Root of a negative number is NaN";
+}
+* 247. Вычислите значение выражения.
+function expression(a, b, c){
+  return +(Math.sqrt(a) + Math.sqrt(Math.abs(b-c)) / (a**3 + b**2 + c**4)).toFixed(2);
+}
