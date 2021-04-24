@@ -3816,3 +3816,13 @@ function perimeter(x1, y1, x2, y2, x3, y3){
   let bc = Math.sqrt((x3-x2)**2 + (y3-y2)**2);
   return +(ab + ac + bc).toFixed(2);
 }
+
+* 249. How bigga ma pizza ?
+function howBiggaMaPizza(blob, crust) {
+    let volume = 4 / 3 * Math.PI * ((blob / 2) ** 3);
+    if(crust === 'thick') crust = 5;
+    else crust = 1;
+    let square = volume / crust;
+    let radius = ((square / Math.PI).toFixed(3)) ** 0.5;
+    return radius;
+}
