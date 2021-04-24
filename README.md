@@ -3809,3 +3809,20 @@ function squareRoot(x){
 function expression(a, b, c){
   return +(Math.sqrt(a) + Math.sqrt(Math.abs(b-c)) / (a**3 + b**2 + c**4)).toFixed(2);
 }
+* 248. Периметр треугольникa
+function perimeter(x1, y1, x2, y2, x3, y3){
+  let ab = Math.sqrt((x2-x1)**2 + (y2-y1)**2);
+  let ac = Math.sqrt((x3-x1)**2 + (y3-y1)**2);
+  let bc = Math.sqrt((x3-x2)**2 + (y3-y2)**2);
+  return +(ab + ac + bc).toFixed(2);
+}
+
+* 249. How bigga ma pizza ?
+function howBiggaMaPizza(blob, crust) {
+    let volume = 4 / 3 * Math.PI * ((blob / 2) ** 3);
+    if(crust === 'thick') crust = 5;
+    else crust = 1;
+    let square = volume / crust;
+    let radius = ((square / Math.PI).toFixed(3)) ** 0.5;
+    return radius;
+}
