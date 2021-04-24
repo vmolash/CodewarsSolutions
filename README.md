@@ -3801,3 +3801,7 @@ function isSquare(x){
   let y = Math.sqrt(x);
   return y % 1 ? `${x} is not a square` : `${x} is square of ${y}`
 }
+* 246. Корень квадратный из числа
+function squareRoot(x){
+  return x >= 0 ? +Math.sqrt(x).toFixed(2) : "Root of a negative number is NaN";
+}
