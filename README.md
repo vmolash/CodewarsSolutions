@@ -3830,3 +3830,22 @@ function howBiggaMaPizza(blob, crust) {
 function smash (words) {
     return words.join(' ');
 };
+* 251. Arithmetic progression
+function arithmeticSequenceElements(a,r,n) {
+  const arr = [];
+  for (let i = 0; i < n; i++){
+    arr.push(a);
+    a += r;
+  }
+  return arr.join(', ');
+}
+
+* 252. Growth of a Population
+function nbYear(p0, percent, aug, p) {
+   let years = 0;
+  while (p0 < p) {
+    p0 += (p0 * percent ) / 100 + aug;
+    years++;
+  }
+  return years;
+}
