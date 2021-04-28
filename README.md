@@ -3859,3 +3859,32 @@ function bouncingBall(initial, proportion) {
   }
   return count;
 };
+
+* 254. Debug Sum of Digits of a Number
+function getSumOfDigits(n) {
+  let sum = 0;
+  while (n > 0) {
+    let last = n % 10;
+    sum += last;
+    n = Math.floor(n / 10);
+  }
+  return sum;
+}
+
+* 255. Mythical Heads and Tails
+function beasts(heads, tails){
+  for (let o = 0; o <= tails; o++) {
+    for (let h = 0; h <= tails; h++) {
+      if (o + h === tails && o * 2 + h * 5 === heads) {
+        return [o, h];
+      }
+    }
+  }
+  return "No solutions";
+}
+
+function beasts(heads, tails){
+  let h = (heads - 2*tails) / 3;
+  let o = tails - h;
+  return h >= 0 && o >= 0 && h % 1 === 0 && o % 1 === 0 ? [o, h] : "No solutions";
+}
