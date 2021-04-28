@@ -3888,3 +3888,19 @@ function beasts(heads, tails){
   let o = tails - h;
   return h >= 0 && o >= 0 && h % 1 === 0 && o % 1 === 0 ? [o, h] : "No solutions";
 }
+* 256. Next Prime
+function isPrime(n) {
+  if(n <= 1) return false;
+  for (let i = 2; i <= Math.round(n ** 0.5); i++) {
+    if(n % i === 0) return false;
+  }
+  return true;
+}
+
+function nextPrime(n){
+  n++;
+  while (!isPrime(n)) {
+    n++;
+  }
+  return n;
+}
