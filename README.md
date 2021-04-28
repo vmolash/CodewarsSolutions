@@ -3826,3 +3826,36 @@ function howBiggaMaPizza(blob, crust) {
     let radius = ((square / Math.PI).toFixed(3)) ** 0.5;
     return radius;
 }
+* 250.Sentence Smash
+function smash (words) {
+    return words.join(' ');
+};
+* 251. Arithmetic progression
+function arithmeticSequenceElements(a,r,n) {
+  const arr = [];
+  for (let i = 0; i < n; i++){
+    arr.push(a);
+    a += r;
+  }
+  return arr.join(', ');
+}
+
+* 252. Growth of a Population
+function nbYear(p0, percent, aug, p) {
+   let years = 0;
+  while (p0 < p) {
+    p0 += (p0 * percent ) / 100 + aug;
+    years++;
+  }
+  return years;
+}
+
+* 253. Bouncing Ball
+function bouncingBall(initial, proportion) {
+  let count = 0;
+  while (initial > 1) {
+    initial = initial * proportion;
+    count++;
+  }
+  return count;
+};
