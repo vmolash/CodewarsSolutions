@@ -3826,3 +3826,7 @@ function howBiggaMaPizza(blob, crust) {
     let radius = ((square / Math.PI).toFixed(3)) ** 0.5;
     return radius;
 }
+* 250.Sentence Smash
+function smash (words) {
+    return words.join(' ');
+};
