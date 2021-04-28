@@ -3849,3 +3849,13 @@ function nbYear(p0, percent, aug, p) {
   }
   return years;
 }
+
+* 253. Bouncing Ball
+function bouncingBall(initial, proportion) {
+  let count = 0;
+  while (initial > 1) {
+    initial = initial * proportion;
+    count++;
+  }
+  return count;
+};
