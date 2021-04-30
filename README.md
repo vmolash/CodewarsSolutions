@@ -3920,3 +3920,15 @@ function firstEvenElement(arr){
   }
   return result;
 }
+
+* 259. Heads and Legs
+function animals(heads, legs){
+  for (let chickens = 0; chickens <= heads; chickens++) {
+    for (let cows = 0; cows <= heads; cows++) {
+      if (chickens + cows === heads && chickens * 2 + cows * 4 === legs) {
+        return [chickens, cows];
+      }
+    }
+  }
+  return "No solutions";
+}
