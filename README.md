@@ -3908,3 +3908,27 @@ function nextPrime(n){
 function removeExclamationMarks(s) {
   return s.replace(/!/g, '');
 }
+
+* 258. Break
+function firstEvenElement(arr){
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      result = [arr[i], i];
+      break;
+    }
+  }
+  return result;
+}
+
+* 259. Heads and Legs
+function animals(heads, legs){
+  for (let chickens = 0; chickens <= heads; chickens++) {
+    for (let cows = 0; cows <= heads; cows++) {
+      if (chickens + cows === heads && chickens * 2 + cows * 4 === legs) {
+        return [chickens, cows];
+      }
+    }
+  }
+  return "No solutions";
+}
