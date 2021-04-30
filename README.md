@@ -3908,3 +3908,15 @@ function nextPrime(n){
 function removeExclamationMarks(s) {
   return s.replace(/!/g, '');
 }
+
+* 258. Break
+function firstEvenElement(arr){
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      result = [arr[i], i];
+      break;
+    }
+  }
+  return result;
+}
