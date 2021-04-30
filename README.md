@@ -3904,3 +3904,7 @@ function nextPrime(n){
   }
   return n;
 }
+* 257. REmove !
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '');
+}
