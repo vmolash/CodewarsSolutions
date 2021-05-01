@@ -3952,3 +3952,9 @@ function nbYear(p0, percent, aug, p) {
   }
   return years;
 }
+
+* 262. Remove First and Last Character Part Two
+function array(arr){
+  arr = arr.replace(/ /g, '').split(',').slice(1, -1);
+  return arr.length === 0 ? null : arr.join(' ');
+}
