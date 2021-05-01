@@ -3932,3 +3932,13 @@ function animals(heads, legs){
   }
   return "No solutions";
 }
+
+* 260. Bouncing Ball
+function bouncingBall(initial, proportion) {
+  let count = 0;
+  while (initial > 1) {
+    initial = initial * proportion;
+    count++;
+  }
+  return count;
+};
