@@ -3943,7 +3943,7 @@ function bouncingBall(initial, proportion) {
   return count;
 };
 
-* 261.
+* 261. Growth of a Population
 function nbYear(p0, percent, aug, p) {
    let years = 0;
   while (p0 < p) {
