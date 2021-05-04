@@ -3958,3 +3958,27 @@ function array(arr){
   arr = arr.replace(/ /g, '').split(',').slice(1, -1);
   return arr.length === 0 ? null : arr.join(' ');
 }
+
+* 263. Calculator
+const Calculator = function() {
+  this.evaluate = string => {
+    let arr = string.split(' ');
+    let arr1= [Number(arr[0])];
+    let sum = 0;
+    if(arr.length === 0) return 0;
+    else if(arr.length === 1) return +string;
+    else {
+      for (let i = 1; i < arr.length; i+= 2) {
+        if(arr[i] === '*') arr1[arr1.length-1] = arr1[arr1.length-1]*Number(arr[i+1]);
+        if(arr[i] === '/') arr1[arr1.length-1] = arr1[arr1.length-1]/Number(arr[i+1]);
+        if(arr[i] === '+' || arr[i] === '-' ) {arr1.push(arr[i]); arr1.push(Number(arr[i+1]))}
+      }
+      sum = arr1[0];
+      for (let i = 1; i < arr1.length; i+=2) {
+        if(arr1[i] === '+') sum += arr1[i+1];
+        else sum -= arr1[i+1];
+      }
+      return sum;
+    }
+  }
+}
