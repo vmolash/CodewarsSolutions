@@ -3982,3 +3982,102 @@ const Calculator = function() {
     }
   }
 }
+
+* 263.
+You have some CSV input data that counts how many times that users have clicked on an ad on each individual domain. Every line consists of a click count and a domain name, like this:
+counts = [ "900,google.com",
+"60,mail.yahoo.com",
+"10,mobile.sports.yahoo.com",
+"40,sports.yahoo.com",
+"300,yahoo.com",
+"10,stackoverflow.com",
+"20,overflow.com",
+"5,com.com",
+"2,en.wikipedia.org",
+"1,m.wikipedia.org",
+"1,mobile.sports",
+"1,google.co.uk"]
+Write a function that takes this input as a parameter and returns a data structure containing the number of clicks that were recorded on each domain AND each subdomain under it. For example, a click on "mail.yahoo.com" counts toward the totals for "mail.yahoo.com", "yahoo.com", and "com". (Subdomains are added to the left of their parent domain. So "mail" and "mail.yahoo" are not valid domains. Note that "mobile.sports" appears as a separate domain near the bottom of the input.)
+Sample output (in any order/format):
+calculateClicksByDomain(counts) =>
+com: 1345
+google.com: 900
+stackoverflow.com: 10
+overflow.com: 20
+yahoo.com: 410
+mail.yahoo.com: 60
+mobile.sports.yahoo.com: 10
+sports.yahoo.com: 50
+com.com: 5
+org: 3
+wikipedia.org: 3
+en.wikipedia.org: 2
+m.wikipedia.org: 1
+mobile.sports: 1
+sports: 1
+uk: 1
+co.uk: 1
+google.co.uk: 1
+
+// Julia's
+function calculateClicksByDomain(counts) {
+  const result = {}
+  for (let el of counts) {
+    const mapEl = el.split(','); 
+    const domainParts = mapEl[1].split('.');
+    for (let i = domainParts.length-1; i >= 0; i--) {
+      const subDomain = domainParts.slice(i).join('.')
+      if (!result[subDomain]) result[subDomain] = +mapEl[0];
+      else result[subDomain] += +mapEl[0]
+    }
+  }
+  return result;
+}
+
+// Ivan's
+const calculateClicksByDomain = (counts) => {
+  const result = {}
+  counts.map(el => {
+    const elData = el.split(',');
+    const domain = elData[1];
+    const clicks = +elData[0];    
+    countDomains(domain, clicks)
+  })
+  function countDomains(domain, clicks){
+    if(!domain.length) return null;
+    if(result[domain] >= 0) result[domain] += clicks;
+    else result[domain] = clicks;
+    const subDomain = domain.split('.').slice(1).join('.');
+    countDomains(subDomain, clicks);
+  }
+  return result;
+}
+console.log(calculateClicksByDomain(counts))
+
+// Marina's
+function calculateClicksByDomain(arr){
+ 
+  let obj={}
+  
+ for(let el of arr){
+  let subarr = el.split(',');
+  let domains = subarr[1].split('.');
+   let last='';
+   for(let i=domains.length-1;i>=0;i--)
+   {
+    let cur=''
+    if(i===domains.length-1)
+      cur= domains[i];
+    else 
+     cur =domains[i] +'.' + last;
+    if(!obj[cur]){
+     obj[cur]=+subarr[0]; 
+    }
+    else{
+      obj[cur]=+obj[cur] + +subarr[0];
+    }  
+    last = cur;
+   }
+ }
+ console.log(obj)
+}
