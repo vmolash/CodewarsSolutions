@@ -4119,3 +4119,43 @@ function arithmetic(a, b, operator){
     'divide'  : a / b,
   }[operator]
 }
+* 266 . 
+// Найти кол-во различных слов в этой строке
+function countWords(text) {
+  text = text.toLowerCase().split(' ');
+  console.log(text);
+  let obj = {}
+  for (let el of text) {
+    if(obj[el]) {
+      obj[el]++;
+    } else {
+      obj[el] = 1;
+    }
+  }
+  return obj
+}
+
+console.log(countWords("Roses are red violets are blue roses and violets are nice"))
+
+* 267. //Дана строка s = "five nine eight two four" 
+//найти среднее арифметическое чисел, записанных в виде строки, 
+//и результат вывести в виде строки(округлить до целого)
+function avarage(str){
+  let arr = str.split(' ');
+  let digits = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight:8,
+    nine: 9, 
+  }
+  arr = arr.map(el => digits[el]);
+  console.log(arr);
+  return Math.round(arr.reduce((acc, sum) => acc + sum, 0)/arr.length);
+}
+console.log(avarage("five nine eight two four" ));
