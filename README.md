@@ -4119,3 +4119,20 @@ function arithmetic(a, b, operator){
     'divide'  : a / b,
   }[operator]
 }
+* 266 . 
+// Найти кол-во различных слов в этой строке
+function countWords(text) {
+  text = text.toLowerCase().split(' ');
+  console.log(text);
+  let obj = {}
+  for (let el of text) {
+    if(obj[el]) {
+      obj[el]++;
+    } else {
+      obj[el] = 1;
+    }
+  }
+  return obj
+}
+
+console.log(countWords("Roses are red violets are blue roses and violets are nice"))
