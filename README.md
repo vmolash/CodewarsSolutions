@@ -4053,3 +4053,31 @@ const calculateClicksByDomain = (counts) => {
   return result;
 }
 console.log(calculateClicksByDomain(counts))
+
+// Marina's
+function calculateClicksByDomain(arr){
+ 
+  let obj={}
+  
+ for(let el of arr){
+  let subarr = el.split(',');
+  let domains = subarr[1].split('.');
+   let last='';
+   for(let i=domains.length-1;i>=0;i--)
+   {
+    let cur=''
+    if(i===domains.length-1)
+      cur= domains[i];
+    else 
+     cur =domains[i] +'.' + last;
+    if(!obj[cur]){
+     obj[cur]=+subarr[0]; 
+    }
+    else{
+      obj[cur]=+obj[cur] + +subarr[0];
+    }  
+    last = cur;
+   }
+ }
+ console.log(obj)
+}
