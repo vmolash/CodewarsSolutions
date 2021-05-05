@@ -4019,6 +4019,7 @@ uk: 1
 co.uk: 1
 google.co.uk: 1
 
+// Julia's
 function calculateClicksByDomain(counts) {
   const result = {}
   for (let el of counts) {
@@ -4032,3 +4033,23 @@ function calculateClicksByDomain(counts) {
   }
   return result;
 }
+
+// Ivan's
+const calculateClicksByDomain = (counts) => {
+  const result = {}
+  counts.map(el => {
+    const elData = el.split(',');
+    const domain = elData[1];
+    const clicks = +elData[0];    
+    countDomains(domain, clicks)
+  })
+  function countDomains(domain, clicks){
+    if(!domain.length) return null;
+    if(result[domain] >= 0) result[domain] += clicks;
+    else result[domain] = clicks;
+    const subDomain = domain.split('.').slice(1).join('.');
+    countDomains(subDomain, clicks);
+  }
+  return result;
+}
+console.log(calculateClicksByDomain(counts))
