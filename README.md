@@ -4159,3 +4159,34 @@ function avarage(str){
   return Math.round(arr.reduce((acc, sum) => acc + sum, 0)/arr.length);
 }
 console.log(avarage("five nine eight two four" ));
+
+* 268. // 7. Нарисовать елочку
+//    *
+//   ***
+//  *****
+// *******
+//    |
+
+function tree(n) {
+  let width = n * 2 - 1;
+  let s = '';
+  for (let i = 1; i <= width; i+=2) {
+    let countSpaces = (width - i) / 2;
+    s += ' '.repeat(countSpaces) + '*'.repeat(i) + ' '.repeat(countSpaces) +'\n';
+  }
+  return s.trimEnd();
+}
+console.log(tree(7));
+
+* 268. Fruit string calculator
+function calculate(string) {
+  let arr = string.split(" ");
+    let numb = [];
+    for(let el of arr){
+      if(!isNaN(+el)){
+        numb.push(+el)
+      }
+    }
+  
+  return arr.includes('loses') ? numb[0] - numb[1] : numb[0] + numb[1];
+}
