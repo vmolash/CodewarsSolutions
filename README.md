@@ -4177,3 +4177,16 @@ function tree(n) {
   return s.trimEnd();
 }
 console.log(tree(7));
+
+* 268. Fruit string calculator
+function calculate(string) {
+  let arr = string.split(" ");
+    let numb = [];
+    for(let el of arr){
+      if(!isNaN(+el)){
+        numb.push(+el)
+      }
+    }
+  
+  return arr.includes('loses') ? numb[0] - numb[1] : numb[0] + numb[1];
+}
