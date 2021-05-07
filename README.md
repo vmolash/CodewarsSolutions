@@ -4224,5 +4224,5 @@ function isLanguageDiverse(list) {
     } else obj[el.language] = 1;
   }
   let arr = Object.values(obj);
-  return Math.max(...arr) / Math.min(...arr) < 3;
+  return Math.max(...arr) / Math.min(...arr) <= 2;
 }
