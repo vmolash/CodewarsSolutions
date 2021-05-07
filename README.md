@@ -4190,3 +4190,17 @@ function calculate(string) {
   
   return arr.includes('loses') ? numb[0] - numb[1] : numb[0] + numb[1];
 }
+*269. Mispelled word
+var mispelled = function(word1, word2){
+  //сразу отсекаем слова в которых длина отличается более чем на 1 символ
+  if ((word1.length - word2.length) > 1 || (word2.length - word1.length) > 1) return false;
+ // счетчик нужен для того, чтобы посчитать количество символов, которые есть в одном слове,
+  //но их нет во втором
+  let count = 0;
+  for (let i = 0; i < word1.length; i++) {
+    if (!word2.includes(word1[i])) {
+      count++;
+    }
+  }
+  return count <= 1 ? true : false;
+}
