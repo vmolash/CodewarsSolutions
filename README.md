@@ -4204,3 +4204,25 @@ var mispelled = function(word1, word2){
   }
   return count <= 1 ? true : false;
 }
+* 270.
+function orderFood(list) {
+  let obj = {};
+  for(let el of list) {
+    if(obj[el.meal]) {
+      obj[el.meal]++;
+    } else obj[el.meal] = 1;
+  }
+  return obj;
+}
+
+* 271. Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?
+function isLanguageDiverse(list) {
+  let obj = {};
+  for (let el of list) {
+    if(obj[el.language]) {
+      obj[el.language]++;
+    } else obj[el.language] = 1;
+  }
+  let arr = Object.values(obj);
+  return Math.max(...arr) / Math.min(...arr) < 3;
+}
