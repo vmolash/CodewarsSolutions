@@ -4226,3 +4226,16 @@ function isLanguageDiverse(list) {
   let arr = Object.values(obj);
   return Math.max(...arr) / Math.min(...arr) <= 2;
 }
+
+* 272. Average Age of Females
+function averageFemale(list){
+  let sumAge = 0;
+  let count = 0;
+  for (let el of list) {
+    if(el.gender === 'female') {
+      sumAge += el.age;
+      count++;
+    }
+  }
+  return count !== 0 ? sumAge / count : 0;
+}
