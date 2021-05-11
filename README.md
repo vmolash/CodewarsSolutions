@@ -4239,3 +4239,16 @@ function averageFemale(list){
   }
   return count !== 0 ? sumAge / count : 0;
 }
+
+* 273. Greatest common divisor
+function mygcd(x,y){
+  for(let i = Math.min(x,y); i > 0; i--){
+    if(!(x % i) && !(y % i)) return i;
+  }
+}
+function mygcd(x,y){
+  while(y){
+    [x,y] = [y, x % y];
+  }
+  return x;
+}
