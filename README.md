@@ -4252,3 +4252,10 @@ function mygcd(x,y){
   }
   return x;
 }
+
+* 274. Semi-Optional
+function wrap(value) {
+  return  {
+    "value":value 
+  };
+}
