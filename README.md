@@ -4259,3 +4259,6 @@ function wrap(value) {
     "value":value 
   };
 }
+
+* 275. Ordered Count of Characters
+const orderedCount = (text) => [...new Set(text)].map(letter => [letter, text.split(letter).length - 1]);
