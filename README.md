@@ -4280,3 +4280,66 @@ var rooms = {
     }
   }
 }
+
+* 277. реализация promise.all
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 1000, 'foo');
+});
+const promise4 = new Promise((resolve, reject) => {
+  reject('ERROR');
+});
+Promise.allP = (arrayOfPromises) => {
+  return new Promise(async(resolve, reject) => {
+    const values = [];
+    for(let promise of arrayOfPromises){
+      const result = await promise;
+      values.push(result)
+    }
+    if(values.length !== arrayOfPromises.length) reject('Something went wrong')
+    resolve(values)
+  })
+}
+Promise.allP([promise1, promise2, promise3, promise4])
+  .then((values) => {
+   console.log(values);
+ })
+  .catch(error => console.log(error));
+
+Volha Molash  7:19 PM
+Reverse a list of objects.
+0
+Linked data structure
+Linked Lists - Computerphile
+var node3 = { data: 3, next: null };
+node3 = { data: 2, next: node3 };
+node3 = { data: 1, next: node3 }; // <= your code here is node2
+// To make it easier to understand I just set the entire LDS directly
+// each next is point to next data, null means end of data
+let node3 = {
+    "data": 1,
+    "next": {
+        "data": 2,
+        "next": {
+            "data": 3,
+            "next": null
+        }
+    }
+};
+function reversLDS(LDS) {
+    let newLDS = null; // end of LDS
+    while (LDS) { // if not null
+        newLDS = {
+            data: LDS.data, // read data from LDS
+            next: newLDS // set next to previous newLDS(self)
+        };
+        LDS = LDS.next; // get next LDS
+    }
+    return newLDS;
+}
+let reversed = reversLDS(node3);
+while (reversed) {
+    console.log(reversed);
+    reversed = reversed.next;
+}
