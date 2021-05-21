@@ -4352,3 +4352,10 @@ function outed(meet, boss){
   let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
   return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
 }
+
+* 279. Blood-Alcohol Content
+function bloodAlcoholContent(drinks, weight, sex, time){
+  let ratio = sex === 'female' ? 0.66 : 0.73;
+  let bac = (drinks.ounces * drinks.abv * 5.14 / weight * ratio) - 0.015 * time;
+  return +bac.toFixed(4);
+}
