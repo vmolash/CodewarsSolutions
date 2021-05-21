@@ -4359,3 +4359,10 @@ function bloodAlcoholContent(drinks, weight, sex, time){
   let bac = (drinks.ounces * drinks.abv * 5.14 / weight * ratio) - 0.015 * time;
   return +bac.toFixed(4);
 }
+
+* 280. makeBackronym
+//preload variable: dict
+
+var makeBackronym = function(string){
+  return string.split('').map(el => dict[el.toUpperCase()]).join(' ');
+};
