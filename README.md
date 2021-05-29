@@ -4417,3 +4417,14 @@ function outed(meet, boss){
   let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
   return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
 }
+
+* 284. Ironman Triathlon
+function iTri(s){
+  let dist = 2.4+112+26.2;
+  if(s === 0) return 'Starting Line... Good Luck!';
+  if(s <= 2.4) return {'Swim': `${(dist-s).toFixed(2)} to go!`};
+  if(s <= (112+2.4)) return {'Bike': `${(dist-s).toFixed(2)} to go!`};
+  if(s <= (dist-10)) return {'Run': `${(dist-s).toFixed(2)} to go!`};
+  if(s <= dist) return {'Run': 'Nearly there!'};
+  return "You're done! Stop running!";
+}
