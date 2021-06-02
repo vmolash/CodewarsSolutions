@@ -4428,3 +4428,14 @@ function iTri(s){
   if(s <= dist) return {'Run': 'Nearly there!'};
   return "You're done! Stop running!";
 }
+
+* 285. Check thre and two
+function checkThreeAndTwo(array) {
+  console.log(array)
+  const obj = {};
+  for(let el of array){
+    if(obj[el]) obj[el]++;
+    else obj[el] = 1;
+  }
+  return Object.values(obj).includes(3) && Object.values(obj).includes(2);
+}
