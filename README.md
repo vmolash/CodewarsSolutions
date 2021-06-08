@@ -4475,3 +4475,12 @@ for(i = 0; i < arr.length; i++) {
 }
 console.log(min1 + " " + min2);
 console.log(max1 + " " + max2);
+
+* 288.removeChar
+function removeChar(str){
+ let str1 = '';
+ for (let i = 1; i < str.length - 1; i++){
+   str1 += str[i];
+ }
+  return str1;
+}
