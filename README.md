@@ -4484,3 +4484,8 @@ function removeChar(str){
  }
   return str1;
 }
+
+* 289. Str repeat
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
