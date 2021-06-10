@@ -4489,3 +4489,12 @@ function removeChar(str){
 function repeatStr (n, s) {
   return s.repeat(n);
 }
+
+* 290. Multiplication table for number
+function multiTable(number) {
+  let str = '';
+  for(let i = 1; i <= 10; i++){
+    str += `${i} * ${number} = ${i * number}\n`;
+  }
+  return str.trim();
+}
