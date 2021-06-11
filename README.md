@@ -4507,3 +4507,20 @@ function noSpace(x){
   }
   return str;
 }
+
+* 292. polindrom
+let str = 'abcba';
+console.log(str[-1]);
+
+function palindrome(str){
+  for(let i = 0; i < str.length; i++){
+    if(str[i] != str[str.length-1-i]){
+      return false;
+    }
+  }
+  return true;
+}
+console.log(palindrome('abcba'));
+
+
+console.log(undefined !== undefined);
