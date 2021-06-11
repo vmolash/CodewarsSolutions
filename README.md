@@ -4498,3 +4498,12 @@ function multiTable(number) {
   }
   return str.trim();
 }
+
+* 291. Remove String Spaces
+function noSpace(x){
+  let str = '';
+  for(let el of x){
+    if(el !== ' ') str += el;
+  }
+  return str;
+}
