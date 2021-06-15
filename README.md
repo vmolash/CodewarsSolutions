@@ -4597,3 +4597,9 @@ function fizzbuzz(n){
     }
   } 
 }
+
+for(let i = 0; i < 35;){
+  console.log(
+    (++i % 3 ? '' : 'fizz') + (++i % 5 ? '' : 'buzz') || i
+  )
+}
