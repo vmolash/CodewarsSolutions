@@ -4575,3 +4575,25 @@ function maxChar(str){
   return maxChar;
 }
 console.log(maxChar('abcdeeeeff'));
+
+* 295. FizzBuzz
+// div 3 = Fizz
+// div 5 == Buzz
+// div 3 and div 5 == FizzBuzz
+// ex: 1 2 fizz 4 buzz fizz 7 ... fizzbuzz
+
+// LCM Least Common Multiplier = НОК
+
+function fizzbuzz(n){
+  for(let i = 1; i <= n; i++){
+    if(i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if(i % 3 === 0) {
+      console.log('fizz');
+    } else if(i % 5 === 0) {
+      console.log('buzz')
+    } else {
+      console.log(i);
+    }
+  } 
+}
