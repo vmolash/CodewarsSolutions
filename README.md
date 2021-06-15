@@ -4530,3 +4530,48 @@ const countSquares = function(n){
   if(n > 0) return (n**2) * 6 + 2;
   else return 1;
 }
+
+* 294. maxChar
+// maxChar('abcdeeeeff') => 'e'
+
+// function maxChar(str){
+//   const obj = {};
+//   let max = 0;
+//   let maxChar = '';
+  
+//   for(let el of str){
+//     if(obj[el])obj[el]++;
+//     else obj[el] = 1;
+//   }
+  
+//   const arr = Object.entries(obj);
+//   for(let key in obj){
+//     if(obj[key] > max) {
+//       max = obj[key];
+//       maxChar = key;
+//     }
+//   }
+//   return maxChar;
+// }
+// console.log(maxChar('abcdeeeeff'));
+
+function maxChar(str){
+  const obj = {};
+  let max = 0;
+  let maxChar = '';
+  
+  str.split('').forEach(function(el){
+    if(obj[el])obj[el]++;
+    else obj[el] = 1;
+  })
+  
+  const arr = Object.entries(obj);
+  for(let key in obj){
+    if(obj[key] > max) {
+      max = obj[key];
+      maxChar = key;
+    }
+  }
+  return maxChar;
+}
+console.log(maxChar('abcdeeeeff'));
