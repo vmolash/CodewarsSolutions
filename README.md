@@ -4524,3 +4524,9 @@ console.log(palindrome('abcba'));
 
 
 console.log(undefined !== undefined);
+
+* 293. countSquares
+const countSquares = function(n){
+  if(n > 0) return (n**2) * 6 + 2;
+  else return 1;
+}
