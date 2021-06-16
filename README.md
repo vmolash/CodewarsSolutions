@@ -4643,3 +4643,22 @@ function sumArray(arr) {
     }
   return sum - max -min;
 }
+
+* 298. the office - outed
+function outed(meet, boss){
+  let sum = 0;
+  let count = 0;
+  for (let key in meet){
+    if(key === boss){
+      sum = sum + meet[key] * 2;
+    } else {
+      sum = sum + meet[key];
+    }
+    count++;
+  }
+  if(sum/count <=5) {
+    return 'Get Out Now!';
+  } else {
+    return 'Nice Work Champ!';
+  }
+}
