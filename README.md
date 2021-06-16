@@ -4597,3 +4597,49 @@ function fizzbuzz(n){
     }
   } 
 }
+
+for(let i = 0; i < 35;){
+  console.log(
+    (++i % 3 ? '' : 'fizz') + (++i % 5 ? '' : 'buzz') || i
+  )
+}
+
+* 296. chunkedArr
+function chunk(arr, size){
+  const res = [];
+  for(let el of arr){
+    const last = res[res.length-1];
+    console.log(`79 last`, last);
+    console.log(`80 res`, res);
+    if(!last || last.length === size) {
+      res.push([el]);
+      console.log('83 res.push([el])', res);
+    } else {
+      last.push(el);
+      console.log('86 last.push(el)', last);
+    }
+  }
+  return res;
+}
+
+console.log(chunk([1,2,3,4,5,6,7,8,9], 2));
+
+* 297. sumArray
+function sumArray(arr) {
+  if (!arr || !arr.length || arr.length <= 1) return 0;
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++){
+    sum += arr[i];
+    }
+    for(let i = 1; i < arr.length; i++){
+      if(max < arr[i]) {
+      max = arr[i];
+      }
+      if(min > arr[i]) {
+      min = arr[i];
+      }
+    }
+  return sum - max -min;
+}
