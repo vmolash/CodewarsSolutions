@@ -4662,3 +4662,14 @@ function outed(meet, boss){
     return 'Nice Work Champ!';
   }
 }
+
+* 299. seriesSum
+function SeriesSum(n){
+  let res = 1;
+  let participal = 4;
+  for(let i = 1; i < n; i++){
+    res += 1/participal;
+    participal += 3;
+  }
+  return n < 1 ? '0.00' : res.toFixed(2);
+}
