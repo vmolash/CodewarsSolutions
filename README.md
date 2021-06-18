@@ -4673,3 +4673,11 @@ function SeriesSum(n){
   }
   return n < 1 ? '0.00' : res.toFixed(2);
 }
+
+* 300. Slope
+function slope(arr){
+  let sum = (arr[1] - arr[3]) / (arr[0] - arr[2]);
+  let sumString = sum.toString();
+  
+  return arr[0] === arr[2] ? "undefined" : sumString;
+}
