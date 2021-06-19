@@ -4681,3 +4681,36 @@ function slope(arr){
   
   return arr[0] === arr[2] ? "undefined" : sumString;
 }
+
+* 301. Easy the StockBroker
+function isValidStock(stock){
+  if(stock.length !== 4) return false;
+  if(stock[1].includes('.')) return false;
+  if(!stock[2].includes('.')) return false;
+  return true;
+}
+
+const sumStock = stock => +stock[1] * +stock[2];
+
+function balanceStatements(list){
+  if(!list) return `Buy: 0 Sell: 0`;
+  let buy = 0, sell = 0, badly = [];
+  list.split(', ').forEach(stockRaw => {
+    console.log(stockRaw);
+    const stock = stockRaw.split(' ');
+    console.log(stock);
+    if(!isValidStock(stock)){
+      badly.push(stockRaw);
+    } else {
+      if(stock[3] === 'B') buy += sumStock(stock);
+      if(stock[3] === 'S') sell += sumStock(stock);
+    }
+    console.log(buy, sell);
+  })
+  let badlyExplain = '';
+  if(badly.length) {
+    console.log(badly);
+    badlyExplain = `; Badly formed ${badly.length}: ${badly.join(' ;')} ;`
+  }
+  return `Buy: ${Math.round(buy)} Sell: ${Math.round(sell)}${badlyExplain}`
+}
