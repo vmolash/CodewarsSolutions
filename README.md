@@ -4714,3 +4714,23 @@ function balanceStatements(list){
   }
   return `Buy: ${Math.round(buy)} Sell: ${Math.round(sell)}${badlyExplain}`
 }
+
+* 302. divisibleSumPairs
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+let count = 0;
+    const ar1 = {};
+    for(let i=0; i<ar.length; i++){  
+      let div = (ar[i])%k;         
+      if( ar1[k - div] != undefined) {           
+        count = count + ar1[k - div];
+         }
+     if(div == 0) {div = k;}
+            if(ar1[div] != undefined){
+          ar1[div] = ar1[div] + 1;
+        } else {
+            ar1[div] = 1;
+        }     
+    }
+return count;
+}
