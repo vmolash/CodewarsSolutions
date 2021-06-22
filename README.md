@@ -4743,3 +4743,72 @@ function evenLast(numbers) {
   }
   return  sum * (numbers.length ? numbers[numbers.length-1] : 1);
 }
+
+* 304. regular expressions
+
+
+Выбрать вэб сайты https?:\/\/(www.)?\w+\.\w+(\/\w+)?
+https://www.google.com
+http://QAForEveryone.edu
+https://www.buymeacoffee.com/SergeID
+
+Выбрать электр.почту
+[a-z0-9_.+-]+@[a-z0-9-]+\.[\w0-9.]+
+QaForEveryone@gmail.com
+Tester.JavaScript@QASchool.edu
+JavaScript-123-test@my-office.ru
+
+a.b
+ahb acb aeb aeeb adcb axeb
+
+
+Выбрать только имена людей
+Группирование M(r|s)
+M(rs|r|s)\.?\s[A-Z]\w*
+sdfjkljl MjkjMkjlsdf 234 j
+Mr. Smith
+Mr Twister
+sdfsff. jkjkljlj wruo
+Ms Davis
+Mrs. Robinson
+123-224-24345
+Mr. X
+sdfksdjfkls
+
+
+* Quantifiers
+* означает 0 or more
++ означает 1 or more
+? означает 0 or 1
+{3} только 3 символа
+{3,5} от 3х до 5 символов
+{3,} от 3х до бесконечности
+
+e*
+e+
+e?
+e{2,3} - greedy quantifier
+e{2,3}? - lazy quantifier
+test
+teest
+teeest
+teeeeest
+
+
+
+\b\w\b
+\b\w{8,10}\b
+a d f ffqwerty
+
+cat bat rat mat ret
+
+QAForEveryOne Java Javascript
+ Python
+digit asedrty \d - все цифры
+\d{3}[-.]\d{3}[-.]\d{4}\
+455-123-7895
+152.458.7412
+
+// Meta characters. Чтобы выбрать только . - ее нужно экранировать \.
+.[ { ( \ ^ | ? * + 
+
