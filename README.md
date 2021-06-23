@@ -4828,3 +4828,20 @@ function meeting(x, need){
   }
   return 'Not enough!';
 }
+
+* 306. Salesman Travel
+function travel(r, zipcode) {
+  let arr = r.split(',');
+  const adr = [];
+  const numb = [];
+  for(let el of arr){
+    let zip = el.slice(-8);
+    if(zip === zipcode) {
+      let num = el.slice(0, el.indexOf(' '));
+      let address = el.slice(num.length+1, -9);
+      numb.push(num);
+      adr.push(address);
+    }
+  }
+  return `${zipcode}:${adr}/${numb}`;
+}
