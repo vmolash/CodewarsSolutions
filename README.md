@@ -4812,3 +4812,19 @@ digit asedrty \d - все цифры
 // Meta characters. Чтобы выбрать только . - ее нужно экранировать \.
 .[ { ( \ ^ | ? * + 
 
+* 305. The Office V - Find a Chair
+function meeting(x, need){
+  const res = [];
+  if(!need) return "Game On";
+  for(let el of x){
+    let availableChair = (el[1] > el[0].length) ? el[1] - el[0].length : 0;
+    if(availableChair < need) {
+      need -= availableChair;
+      res.push(availableChair);
+    } else {
+      res.push(need);
+      return res;
+    }
+  }
+  return 'Not enough!';
+}
