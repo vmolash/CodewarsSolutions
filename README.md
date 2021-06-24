@@ -4810,7 +4810,7 @@ digit asedrty \d - все цифры
 152.458.7412
 
 // Meta characters. Чтобы выбрать только . - ее нужно экранировать \.
-.[ { ( \ ^ | ? * + 
+// .[ { ( \ ^ | ? * + 
 
 * 305. The Office V - Find a Chair
 function meeting(x, need){
@@ -4828,8 +4828,7 @@ function meeting(x, need){
   }
   return 'Not enough!';
 }
-
-* 306. Salesman Travel
+* 306. Salesman's Travel
 function travel(r, zipcode) {
   let arr = r.split(',');
   const adr = [];
