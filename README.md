@@ -4844,3 +4844,14 @@ function travel(r, zipcode) {
   }
   return `${zipcode}:${adr}/${numb}`;
 }
+
+* 307. pair of gloves
+function numberOfPairs(gloves){
+  let obj = {};
+  for(let el of gloves){
+    if(obj[el]) obj[el]++
+    else obj[el] = 1;
+  }
+  let arr = Object.values(obj);
+  return arr.reduce((acc,cur) => acc + Math.floor(cur/2), 0);
+}
