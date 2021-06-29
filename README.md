@@ -4855,3 +4855,20 @@ function numberOfPairs(gloves){
   let arr = Object.values(obj);
   return arr.reduce((acc,cur) => acc + Math.floor(cur/2), 0);
 }
+
+* 308. The common letter
+function replaceCommon(string, letter) {
+  let s = string.replace(/ /g, '')
+  let obj = {};
+  for (let i = 0; i < s.length; i++){
+    if(obj[s[i]]){
+      obj[s[i]]++
+    } else {
+      obj[s[i]] = 1
+    }
+  }
+  let arr = Object.entries(obj)
+  let max = Math.max(...Object.values(obj))
+  arr = arr.filter(el => el[1] === max)
+  return string.replace(/[a-z]/ig, el => el === arr[0][0] ? letter : el)
+}
