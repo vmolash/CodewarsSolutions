@@ -4872,3 +4872,11 @@ function replaceCommon(string, letter) {
   arr = arr.filter(el => el[1] === max)
   return string.replace(/[a-z]/ig, el => el === arr[0][0] ? letter : el)
 }
+
+* 309. find the slope
+function slope(arr){
+  let sum = (arr[1] - arr[3]) / (arr[0] - arr[2]);
+  let sumString = sum.toString();
+  
+  return arr[0] === arr[2] ? "undefined" : sumString;
+}
