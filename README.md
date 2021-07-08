@@ -4880,3 +4880,35 @@ function slope(arr){
   
   return arr[0] === arr[2] ? "undefined" : sumString;
 }
+
+* 310. Regular expressions
+// с номерами телефона
+// 123-456-7890 Manager
+569-254-8693 Accountant
+456.489-5789 Software Engineer
+789.156.7532 QA Tester
+/\d{3}(?<sep>[.-])\d{3}\k<sep>\d{4}/gmi
+
+
+/(?:[a-f\d]{2}(?<sep>[:.]))([a-f\d]{2}\k<sep>){4}[a-f\d]{2}/gmi
+MAC address:
+00:00:0A:BB:28:FC
+0B:12:2D:BC:2B:A2
+AA:10:9B-DA:6B-DC
+/([a-f\d]{2}[:-]){5}[a-f\d]{2}/gmi
+
+/\w+\s\w+\s\w+/gmi
+/(?<first>\w+)\s(?<second>\w+)\s(?<third>\w+)/gmi
+Идем учиться в школу QA for Everyone! Там круто и абсолтно бесплатно!
+
+Java lesson at 08:30, JavaScript at 12:45, Python 21:59
+
+
+Стандартный план для Jira стоит 7 долларов на одного пользователя. Если 100 студентов скинутся на покупку этого плана, то за 700 долларов мы бы могли им пользоваться целый месяц или даже растянуть это на целых два месяца, если вдвоем пользоваться одной учетной записью!
+
+Lookaround = Lookbehind(positive and negative) + Lookahead(positive and negative)
+Lookahead positive X(?=Y) ex: /\d+(?=\sдолларов)\b/gmi
+Lookahead negative X(?!Y) ex:  /\d+(?!\sдолларов)\b/gmi
+
+// Lookbehind positive (?<=Y)X ex: \(?<=Если\s)\d+
+// Lookbehind negative (?<=Y)X ex: \(?<!Если\s)\b\d+
