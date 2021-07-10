@@ -4912,3 +4912,20 @@ Lookahead negative X(?!Y) ex:  /\d+(?!\sдолларов)\b/gmi
 
 // Lookbehind positive (?<=Y)X ex: \(?<=Если\s)\d+
 // Lookbehind negative (?<=Y)X ex: \(?<!Если\s)\b\d+
+
+* 311. The Office V - Find a Chair
+function meeting(x, need){
+  const res = [];
+  if(!need) return "Game On";
+  for(let el of x){
+    let availableChair = (el[1] > el[0].length) ? el[1] - el[0].length : 0;
+    if(availableChair < need) {
+      need -= availableChair;
+      res.push(availableChair);
+    } else {
+      res.push(need);
+      return res;
+    }
+  }
+  return 'Not enough!';
+}
