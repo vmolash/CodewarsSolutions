@@ -4929,3 +4929,36 @@ function meeting(x, need){
   }
   return 'Not enough!';
 }
+
+* 312. polindrom
+var isPalindrome = function(s) {
+    let l = 0;
+    let r = s.length - 1;
+    
+    while(l < r) {
+        let lCode = s.charCodeAt(l);
+        let rCode = s.charCodeAt(r);
+
+        if(!isLetterOrDigit(lCode)) {
+            l++;
+            continue;
+        }
+        
+        if(!isLetterOrDigit(rCode)) {
+            r--;
+            continue;
+        }
+        
+        if(s[l].toUpperCase() != s[r].toUpperCase())
+            return false;
+        l++;
+        r--;
+    }
+    return true;
+};
+
+function isLetterOrDigit(chCode) {
+    return (((chCode >= 48) && (chCode <= 57))
+    || ((chCode >= 65) && (chCode <= 90))
+    || ((chCode >= 97) && (chCode <= 122))) 
+}
