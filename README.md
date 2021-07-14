@@ -4962,3 +4962,14 @@ function isLetterOrDigit(chCode) {
     || ((chCode >= 65) && (chCode <= 90))
     || ((chCode >= 97) && (chCode <= 122))) 
 }
+
+* 313. Sum of the first nth term of Series
+function SeriesSum(n){
+  let res = 1;
+  let participal = 4;
+  for(let i = 1; i < n; i++){
+    res += 1/participal;
+    participal += 3;
+  }
+  return n < 1 ? '0.00' : res.toFixed(2);
+}
