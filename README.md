@@ -4973,3 +4973,8 @@ function SeriesSum(n){
   }
   return n < 1 ? '0.00' : res.toFixed(2);
 }
+
+* 314. get character from ASCII Value
+function getChar(c){
+  return String.fromCodePoint(c);
+}
