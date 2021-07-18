@@ -4978,3 +4978,13 @@ function SeriesSum(n){
 function getChar(c){
   return String.fromCodePoint(c);
 }
+
+* 315. Sum without highest and lowest number
+function sumArray(arr) {
+//   if(!arr || !arr.length || arr.length <= 1) return 0;
+  if(arr === null || arr.length < 2) return 0;
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let sum = arr.reduce((acc,cur) => acc + cur, 0);
+  return sum - min - max;
+}
