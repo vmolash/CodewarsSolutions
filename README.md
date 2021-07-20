@@ -4988,3 +4988,21 @@ function sumArray(arr) {
   let sum = arr.reduce((acc,cur) => acc + cur, 0);
   return sum - min - max;
 }
+
+* 316. 977. Squares of a Sorted Array
+var sortedSquares = function(nums) {
+    let squares = [];
+    let l = 0;
+    let r = nums.length - 1;
+    for(let i = nums.length - 1; i >= 0; i--) {
+        if(-nums[l] >= nums[r]) {
+            squares[i] = nums[l] * nums[l];
+            l++;
+        }
+        else {
+            squares[i] = nums[r] * nums[r];
+            r--;
+        }
+    }
+    return squares;
+};
