@@ -5006,3 +5006,25 @@ var sortedSquares = function(nums) {
     }
     return squares;
 };
+
+* 317. sortArrayByParity
+var sortArrayByParity = function(A) {
+    let i = 0;
+    let j = A.length - 1;
+    while(i < j) {
+        if(A[i] % 2 === 0){
+            i++;
+            continue;
+            }
+        if(A[j] % 2 === 1){
+            j--;
+            continue;
+            }
+        let temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
+        i++;
+        j--;
+    }
+    return A;
+};
