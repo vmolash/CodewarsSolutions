@@ -5079,3 +5079,30 @@ function balanceStatements(list){
   }
   return `Buy: ${Math.round(buy)} Sell: ${Math.round(sell)}${badlyExplain}`
 }
+
+* 321. colored sort
+var sortColors = function(nums) {
+    let currentIndex = 0;
+    let zeroIndex = 0;
+    let twoIndex = nums.length - 1;
+    
+    while(currentIndex <= twoIndex) {
+        if(nums[currentIndex] === 0) {
+            swap(zeroIndex, currentIndex);
+            zeroIndex++;
+        }
+        
+        if(nums[currentIndex] === 2) {
+            swap(currentIndex, twoIndex);
+            twoIndex--;
+            currentIndex--;
+        }
+        currentIndex++;
+    }
+    
+    function swap(i, j) {
+        let temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+};
