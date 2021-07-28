@@ -5106,3 +5106,16 @@ var sortColors = function(nums) {
         nums[j] = temp;
     }
 };
+
+* 322. searchingChallenge
+const searchingChallenge = strArr => {
+  const letters = strArr.map(el => el[0]);
+  const numbers = strArr.map(el => el.slice(2,el.length));
+  let res = [];
+  for(let i=0;i<letters.length;i++){
+    let sum = numbers.filter((el, index) => letters[index] === letters[i]).reduce((a,b) => +a + +b,0);
+    res.push(`${letters[i]}: ${sum}`);
+  }
+  const unique = res.filter((el, index) => index === res.indexOf(res.find((e, index) => e[0] === el[0]))).reverse();
+  return cutZeros = unique.filter(el => el[el.length-1] !== '0');
+}
