@@ -5119,3 +5119,36 @@ const searchingChallenge = strArr => {
   const unique = res.filter((el, index) => index === res.indexOf(res.find((e, index) => e[0] === el[0]))).reverse();
   return cutZeros = unique.filter(el => el[el.length-1] !== '0');
 }
+
+* 323. Ease the StockBroker
+function isValidStock(stock){
+  if(stock.length !== 4) return false;
+  if(stock[1].includes('.')) return false;
+  if(!stock[2].includes('.')) return false;
+  return true;
+}
+
+const sumStock = stock => +stock[1] * +stock[2];
+
+function balanceStatements(list){
+  if(!list) return `Buy: 0 Sell: 0`;
+  let buy = 0, sell = 0, badly = [];
+  list.split(', ').forEach(stockRaw => {
+    console.log(stockRaw);
+    const stock = stockRaw.split(' ');
+    console.log(stock);
+    if(!isValidStock(stock)){
+      badly.push(stockRaw);
+    } else {
+      if(stock[3] === 'B') buy += sumStock(stock);
+      if(stock[3] === 'S') sell += sumStock(stock);
+    }
+    console.log(buy, sell);
+  })
+  let badlyExplain = '';
+  if(badly.length) {
+    console.log(badly);
+    badlyExplain = `; Badly formed ${badly.length}: ${badly.join(' ;')} ;`
+  }
+  return `Buy: ${Math.round(buy)} Sell: ${Math.round(sell)}${badlyExplain}`
+}
