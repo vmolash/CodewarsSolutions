@@ -5161,3 +5161,12 @@ function evenLast(numbers) {
   }
   return  sum * (numbers.length ? numbers[numbers.length-1] : 1);
 }
+
+* 325.evenLast
+function evenLast(numbers) {
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i+= 2){
+    sum += numbers[i];
+  }
+  return numbers.length !== 0 ? sum * numbers[numbers.length - 1] : 0;
+}
