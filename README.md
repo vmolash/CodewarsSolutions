@@ -5190,3 +5190,14 @@ function iTri(s){
   if(s <= dist) return {'Run': 'Nearly there!'};
   return "You're done! Stop running!";
 }
+
+* 328. Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+function countLanguages(list) {
+  let obj = {};
+  for(let el of list){
+    let lng = el.language;
+    if(obj[lng] === undefined) obj[lng] = 1;
+    else obj[lng] = obj[lng] + 1;
+  }
+  return obj;
+}
