@@ -5231,3 +5231,11 @@ const searchingChallenge = strArr => {
   const unique = res.filter((el, index) => index === res.indexOf(res.find((e, index) => e[0] === el[0]))).reverse();
   return cutZeros = unique.filter(el => el[el.length-1] !== '0');
 }
+
+* 331. var middleNode = function(head) {
+    let arr = [head];
+    while(arr[arr.length-1].next !== null){
+        arr.push(arr[arr.length-1].next);
+    }
+    return arr[Math.trunc(arr.length/2)];
+};
