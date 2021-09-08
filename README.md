@@ -5294,3 +5294,57 @@ var deleteDuplicates = function(head) {
     }
     return head;
 };
+
+* 336.
+var removeNthFromEnd = function(head, n) {
+    // create a newlistnode which we will use to store our answer
+    let dummy = new ListNode(-1);
+    // keep a reference to head, which we will return
+    dummy.next = head;
+    
+    // we're starting these are our dummy value (-1)
+    let slow = dummy;
+    let fast = dummy;
+    
+    // get one ahead of N # of nodes, so given n =2, then 1->2->3->4->5 we'd be at 3
+    // effectively creating a distance of size N from the fast pointer (3) and the slow (1)
+    for(let i = 1; i <= n + 1; i++) {
+        fast = fast.next;
+    }
+    
+    // slow is at head still, fast is ahead of slow at a distance of N
+    // we move slow and fast one at a time, when fast is at the end of the list (null)
+    // slow will be at distance N-1 from the end of the list
+    while(fast !== null) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    
+    // slow is now one before N, lets skip it
+    slow.next = slow.next.next;
+    
+    // dummy contains our initial value (-1->1->2->3->4->5)
+    // we don't need the dummy value (-1)
+    // so return the next value (1->2->3->4->5)
+    return dummy.next;
+};
+
+
+// this is algo looks manually stepping through it. Given: 1->2->3->4->5, n = 2
+// move fast to N + 1
+// fast     i    n+1 (end point)
+//  1       1    3
+//  2       2    3
+//  3       3    3
+// fast: 3, slow : -1, distance between fast slow: 2 (which will always be n)
+
+// loop until fast !== null
+// slow    fast    distance between (not difference)
+//  1       4             2
+//  2       5             2
+//  3       null(eol)     2
+
+// so now our slow pointer is one before the node we need to skip (n)
+// so lets skip it, slow.next is the value we need to skip (4), so
+// slow.next -> slow.next.next(5)
+// 1->2->3->5```
