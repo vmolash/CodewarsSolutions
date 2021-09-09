@@ -5348,3 +5348,16 @@ var removeNthFromEnd = function(head, n) {
 // so lets skip it, slow.next is the value we need to skip (4), so
 // slow.next -> slow.next.next(5)
 // 1->2->3->5```
+
+* 335. cycly
+var hasCycle = function(head) {
+    if(head === null) return false;
+    var slow = head;
+    var fast = head;
+    while(fast.next !== null && fast.next.next !== null) {
+        fast = fast.next.next;
+        slow = slow.next;
+        if(slow === fast) return true;
+    }
+    return false;
+};
