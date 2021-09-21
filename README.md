@@ -5388,3 +5388,19 @@ var deleteDuplicates = function(head) {
     }
     return head;
 };
+
+* 338. var preorderTraversal = function(root) {
+    let result = [];
+    let stack = [];   
+    stack.push(root);
+        
+    while(stack && stack.length) {
+        let current = stack.pop();
+        if(!current) continue;
+        
+        result.push(current.val);
+        stack.push(current.right);
+        stack.push(current.left);
+    }
+    return result; 
+};
