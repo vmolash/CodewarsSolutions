@@ -5389,36 +5389,7 @@ var deleteDuplicates = function(head) {
     return head;
 };
 
-* 338. var preorderTraversal = function(root) {
-    let result = [];
-    let stack = [];   
-    stack.push(root);
-        
-    while(stack && stack.length) {
-        let current = stack.pop();
-        if(!current) continue;
-        
-        result.push(current.val);
-        stack.push(current.right);
-        stack.push(current.left);
-    }
-    return result; 
-};
-* 335.
-var deleteDuplicates = function(head) {
-    if(head == null || head.next == null) return head;
-    var node = head;
-    while(node.next){
-        if(node.val === node.next.val){
-            node.next = node.next.next;
-        } else {
-            node = node.next;
-        }
-    }
-    return head;
-};
-
- 336. Even last time
+* 338. Even last time
 function evenLast(numbers) {
   let sum = 0;
   for(let i = 0; i < numbers.length; i+=2){
