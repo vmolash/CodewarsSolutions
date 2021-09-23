@@ -5404,8 +5404,7 @@ var deleteDuplicates = function(head) {
     }
     return result; 
 };
-
-* 339.
+* 335.
 var deleteDuplicates = function(head) {
     if(head == null || head.next == null) return head;
     var node = head;
@@ -5418,3 +5417,12 @@ var deleteDuplicates = function(head) {
     }
     return head;
 };
+
+ 336. Even last time
+function evenLast(numbers) {
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i+=2){
+    sum += numbers[i];
+  }
+  return  sum * (numbers.length ? numbers[numbers.length-1] : 1);
+}
