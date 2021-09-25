@@ -5411,3 +5411,21 @@ var deleteDuplicates = function(head) {
     }
     return head;
 };
+
+* 340. Multiplication table for number
+function multiTable(number) {
+  let str = '';
+  for(let i = 1; i <= 10; i++){
+    str += `${i} * ${number} = ${i * number}\n`;
+  }
+  return str.trim();
+}
+
+* 319. Merge two arrays
+function mergeArrays(a, b) {
+  let arr = [];
+  for(let i = 0; i < Math.max(a.length, b.length); i++){
+    arr.push(a[i], b[i]);
+  }
+  return arr.filter(el => el !== undefined);
+}
