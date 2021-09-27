@@ -5429,3 +5429,9 @@ function mergeArrays(a, b) {
   }
   return arr.filter(el => el !== undefined);
 }
+
+*341. const inorderTraversal = root => {
+  if (!root) return [];
+  
+  return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)]
+};
