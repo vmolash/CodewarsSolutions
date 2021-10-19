@@ -5481,3 +5481,14 @@ function evenLast(numbers) {
   }
   return  sum * (numbers.length ? numbers[numbers.length-1] : 1);
 }
+
+* 345. seriesSum
+function SeriesSum(n){
+  let res = 1;
+  let participal = 4;
+  for(let i = 1; i < n; i++){
+    res += 1/participal;
+    participal += 3;
+  }
+  return n < 1 ? '0.00' : res.toFixed(2);
+}
