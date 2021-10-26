@@ -5492,3 +5492,6 @@ function SeriesSum(n){
   }
   return n < 1 ? '0.00' : res.toFixed(2);
 }
+
+* 346. task
+console.log(que1([2, 4, 1, 3, 7, 6, 1, 2, 5, 2], 3))
