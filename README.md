@@ -5495,3 +5495,12 @@ function SeriesSum(n){
 
 * 346. task
 console.log(que1([2, 4, 1, 3, 7, 6, 1, 2, 5, 2], 3))
+
+* 347. The Office I - Outed
+function outed(meet, boss){
+  for(let key in meet){
+    if(key === boss) meet[key] *= 2;
+  }
+  let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
+  return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
+}
