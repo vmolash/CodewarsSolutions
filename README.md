@@ -5504,3 +5504,12 @@ function outed(meet, boss){
   let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
   return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
 }
+
+* 348. Numerical Palindrome #1
+  function palindrome(num) { 
+    if (typeof num !== 'number' || num < 0){
+      return 'Not valid';
+    }
+    const arr = +(num.toString().split('').reverse().join(''));
+    return arr === num;
+  } 
