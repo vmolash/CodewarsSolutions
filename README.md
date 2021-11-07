@@ -5540,3 +5540,23 @@ const searchingChallenge = strArr => {
   const unique = res.filter((el, index) => index === res.indexOf(res.find((e, index) => e[0] === el[0]))).reverse();
   return cutZeros = unique.filter(el => el[el.length-1] !== '0');
 }
+
+* 351. sumArray
+function sumArray(arr) {
+  if (!arr || !arr.length || arr.length <= 1) return 0;
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++){
+    sum += arr[i];
+    }
+    for(let i = 1; i < arr.length; i++){
+      if(max < arr[i]) {
+      max = arr[i];
+      }
+      if(min > arr[i]) {
+      min = arr[i];
+      }
+    }
+  return sum - max -min;
+}
