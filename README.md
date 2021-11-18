@@ -5569,3 +5569,12 @@ function evenLast(numbers) {
   }
   return  sum * (numbers.length ? numbers[numbers.length-1] : 1);
 }
+
+* 353. Merge two arrays
+function mergeArrays(a, b) {
+  let arr = [];
+  for(let i = 0; i < Math.max(a.length, b.length); i++){
+    arr.push(a[i], b[i]);
+  }
+  return arr.filter(el => el !== undefined);
+}
