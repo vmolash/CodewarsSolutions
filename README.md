@@ -5598,3 +5598,12 @@ function mergeArrays(a, b) {
     }
     return result;
 };
+
+* 355. The Office I - Outed
+function outed(meet, boss){
+  for(let key in meet){
+    if(key === boss) meet[key] *= 2;
+  }
+  let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
+  return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
+}
