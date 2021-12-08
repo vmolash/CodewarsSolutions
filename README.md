@@ -5578,3 +5578,32 @@ function mergeArrays(a, b) {
   }
   return arr.filter(el => el !== undefined);
 }
+
+* 354. var inorderTraversal = function(root) {
+    let result = [];
+    if(!root) return result;
+    
+    let stack = [];
+    stack.push(root);
+    let current = root.left;
+    while(current || stack.length){
+        while(current){
+            stack.push(current);
+            current = current.left;
+        }
+            current = stack.pop();
+            result.push(current.val);
+            current = current.right; 
+               
+    }
+    return result;
+};
+
+* 355. The Office I - Outed
+function outed(meet, boss){
+  for(let key in meet){
+    if(key === boss) meet[key] *= 2;
+  }
+  let res = Object.values(meet).reduce((acc,cur) => acc + cur, 0) / Object.values(meet).length;
+  return res <= 5 ? 'Get Out Now!' :  'Nice Work Champ!';
+}
